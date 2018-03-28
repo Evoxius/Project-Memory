@@ -74,6 +74,8 @@ body {
 #chat1 {
 	min-height: 75px;
 	float: left;
+	padding-top: 23px;
+	color: #b20a23;
   margin-top: 45px;
   margin-left: 20px;
 	opacity: 0.7;
@@ -88,6 +90,8 @@ body {
 #chat2 {
 	min-height: 75px;
 	float: right;
+	padding-top: 23px;
+	color: #b20a23;
   margin-top: 45px;
   margin-left: 20px;
 	margin-right: 40px;

@@ -3,13 +3,13 @@ class MemoryView  extends Observer{
     constructor(model){
       super(model);
       this.model = model;
-    
+
       this.model.addObserver(this);
   }
 
   update(){
     super.update();
-  document.getElementsByTagName('h1')[0].innerHTML = this.model.player1;
+  document.getElementById('chat1').innerHTML = this.model.player1;
 
   }
 
