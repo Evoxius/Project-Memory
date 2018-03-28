@@ -9,7 +9,8 @@ class MemoryView  extends Observer{
 
   update(){
     super.update();
-  document.getElementById('chat1').innerHTML = this.model.player1;
+  document.getElementById('chat1').innerHTML = this.model.player1Naam;
+  document.getElementById('chat2').innerHTML = this.model.player2Naam;
 
   }
 

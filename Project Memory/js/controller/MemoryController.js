@@ -12,7 +12,7 @@ class MemoryController {
 
     reageerOpStartSpel(e){
       e = window.event;
-      this.model.setNames("jack", "john")
+      this.model.setNames();
 
       if (document.getElementById('groep8').checked) {
         this.view.showDivGroep8();
