@@ -68,5 +68,9 @@ class MemoryView  extends Observer{
      document.getElementById('form-group2').style.display = "none";
   }
 
+  showMessage(message) {
+    document.querySelector('div>p').innerHTML = message;
+  }
+
 
 }
