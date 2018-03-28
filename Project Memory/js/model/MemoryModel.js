@@ -15,7 +15,14 @@ class MemoryModel extends Observable {
     }
 
     maakSpeelveld(){
+      new Card(0);
       new Card(1);
+      new Card(2);
+      new Card(3);
+      new Card(4);
+      new Card(5);
+      new Card(6);
+
       console.log("model werkt");
       // document.getElementById('card1').style.backgroundImage = "url(img/Groep4/Donald.jpg)"
     }
