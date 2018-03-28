@@ -1,0 +1,355 @@
+body {
+	margin: 0;
+	background: #FF851B;
+	font-family: sans-serif;
+	transition: .6s;
+	background-image: url("../img/background.jpg");
+}
+.btn-group{
+	clear: both;
+	margin-top: 20px;
+}
+
+#option1, #option2, #groep4, #groep8{
+	display: none;
+}
+
+#winScreen {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	transition: background .4s;
+	overflow-y: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#winScreen p {
+	color: white;
+	font-size: 60px;
+	transform: translateY(-70vh);
+	user-select: none;
+	text-shadow: 2px 2px 0 black;
+	animation: textDrop 2s;
+}
+
+
+#intro, #game, #veld {
+	width: 80%;
+	text-align: center;
+	margin: 10px auto 0 auto;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+  color: white;
+	background: #aa8f00;
+	background-image: url("../img/zenbg-3.png"), url("../img/zenbg-4.png");
+	background-repeat: repeat-y, repeat;
+}
+
+#backToStart {
+	margin-top: 90px;
+}
+
+#speler1 {
+	width: 10%;
+	text-align: center;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 50px;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+	color: white;
+	background: #ffffff;
+	background-image: url("../img/persoon.png");
+	background-repeat: repeat-x, repeat;
+	min-height: 175px;
+	float:right;
+
+}
+
+#chat1 {
+	min-height: 75px;
+	float: left;
+  margin-top: 45px;
+  margin-left: 20px;
+	opacity: 0.7;
+	background-color: #57aa52;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+	width: 25%
+
+}
+
+#chat2 {
+	min-height: 75px;
+	float: right;
+  margin-top: 45px;
+  margin-left: 20px;
+	margin-right: 40px;
+	opacity: 0.7;
+	background-color: #57aa52;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+	width: 25%
+
+
+}
+
+#result1 {
+	min-height: 75px;
+	float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+	opacity: 0.7;
+	background-color: #5752aa;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+	width: 15%
+
+}
+
+#result2 {
+	min-height: 75px;
+	float: right;
+  margin-top: 20px;
+	margin-right: 40px;
+  margin-left: 20px;
+	opacity: 0.7;
+	background-color: #5752aa;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+	width: 15%
+
+}
+
+#speler2 {
+	width: 10%;
+	text-align: center;
+	margin-left: 30px;
+	margin-top: 20px;
+	margin-right: 50px;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+	color: white;
+	background: #ffffff;
+	background-image: url("../img/persoon.png");
+	background-repeat: repeat-x, repeat;
+	min-height: 175px;
+	float:left;
+
+}
+
+#startSpel{
+	width: 50%;
+	text-align: center;
+	margin: 10px auto 0 auto;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+  color: white;
+	background: #aa8f00;
+	background-image: url("../img/zenbg-1.png"), url("../img/zenbg-2.png");
+	background-repeat: repeat-y, repeat;
+
+	min-height: 500px;
+  margin-top: 200px;
+}
+
+#spelStart {
+	margin-top: 50px;
+}
+
+#usr1 {
+	width: 50%;
+	margin:auto;
+}
+
+#form-group1 {
+    margin-top: 20px;
+}
+
+#form-group2 {
+    margin-top: 20px;
+}
+
+#usr2 {
+	width: 50%;
+	margin:auto;
+}
+
+#box {
+  margin-top: 40px;
+}
+
+#groep4 {
+    margin-top: 40px;
+    margin-right: 200px;
+
+}
+
+#groep8 {
+    margin-top: 40px;
+
+}
+
+#intro span, #box span {
+	color: #d1c6c8;
+	text-shadow:
+		1px 1px black,
+		1px -1px black,
+		-1px 1px black,
+		-1px -1px black;
+}
+
+#game {
+	min-height: 550px;
+
+}
+
+#veld {
+	min-height: 250px;
+}
+
+.card {
+	width: 7%;
+	text-align: center;
+  margin-left: 10px;
+  margin-top: 60px;
+	margin-right: 50px;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+	color: white;
+	background: ##ffffff;
+	background-image: url("../img/disneylogo.png");
+	background-repeat: repeat-x, repeat;
+	height: 105px;
+	float:right;
+	cursor: pointer;
+}
+
+.card:hover {
+	background: #5b5c6c;
+	background-image: url("../img/disneylogo.png");
+	background-repeat: repeat-x, repeat;
+  opacity: 0.6;
+}
+
+.card2 {
+	width: 7%;
+	text-align: center;
+  margin-left: 10px;
+  margin-top: 60px;
+	margin-right: 50px;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+	color: white;
+	background: ##ffffff;
+	background-image: url("../img/roundabout.jpg");
+	background-repeat: repeat-x, repeat;
+	height: 105px;
+	float:right;
+	cursor: pointer;
+}
+
+.card2:hover {
+	background: #5b5c6c;
+	background-image: url("../img/roundabout.jpg");
+	background-repeat: repeat-x, repeat;
+	opacity: 0.6;
+}
+
+#backAndTime p {
+    margin-top: 50px;
+}
+
+#backAndTime button {
+    margin-top: 30px;
+}
+
+
+#settings {
+	font-size: 22px;
+	background: rgba(0, 0, 0, .2);
+	width: 320px;
+	margin: 20px auto;
+	padding: 10px;
+	border-radius: 20px;
+  color: white;
+}
+
+#settings button {
+  width: 81px;
+  height: 36px;
+	cursor: pointer;
+}
+
+#play-area {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.tile {
+	height: 110px;
+	width: 110px;
+	margin: 20px;
+	border: 1px solid black;
+	background: linear-gradient(rgba(255, 0, 0, .6), brown);
+	cursor: pointer;
+}
+
+.tile p {
+	font-size: 30px;
+	margin: 0;
+	padding: 35%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	filter: blur(20px);
+	user-select: none;
+}
+
+.matched {
+	border-radius: 50%;
+	transition: 1s;
+	background: white;
+}
+
+.matched p {
+	filter: blur(0px);
+}
+
+#container{
+	display: none;
+}
+
+#container2{
+	display: block;
+}
+
+
+@keyframes textDrop {
+	0% {
+		transform: translateY(-70vh);
+	}
+	10% {
+		transform: translateY(-12vh);
+	}
+	80% {
+		transform: translateY(8vh);
+	}
+	100% {
+		transform: translateY(110vh);
+	}
+}
