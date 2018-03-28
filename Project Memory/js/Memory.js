@@ -1,5 +1,5 @@
 window.onload = memory;
-
+var c;
 function memory(){
-    new MemoryController();
+     c = new MemoryController();
 }

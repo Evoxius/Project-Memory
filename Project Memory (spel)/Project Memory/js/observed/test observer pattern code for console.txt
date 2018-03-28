@@ -1,7 +1,0 @@
-let observable = new Observable();
-let observer = new Observer(observable);
-observable.notify();
-observable.addObserver(observer);
-observable.notify();
-observable.removeObserver(observer);
-observable.notify();

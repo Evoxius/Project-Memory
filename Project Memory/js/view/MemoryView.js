@@ -2,7 +2,15 @@ class MemoryView  extends Observer{
 
     constructor(model){
       super(model);
+      this.model = model;
+    
       this.model.addObserver(this);
+  }
+
+  update(){
+    super.update();
+  document.getElementsByTagName('h1')[0].innerHTML = this.model.player1;
+
   }
 
   // Door deze code kan de speler groep 4 kiezen en met 14 kaarten spelen.
@@ -58,5 +66,6 @@ class MemoryView  extends Observer{
    hideName() {
      document.getElementById('form-group2').style.display = "none";
   }
+
 
 }
