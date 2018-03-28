@@ -21,6 +21,13 @@ class MemoryController {
         this.view.showDivGroep4();
       }
     console.log(e.srcElement.id);
+    this.model.maakSpeelveld();
+    }
+
+    reageerOpKlikKaart(e){
+      e = window.event;
+
+
     }
 
 

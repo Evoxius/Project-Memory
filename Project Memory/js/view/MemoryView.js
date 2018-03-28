@@ -9,7 +9,7 @@ class MemoryView  extends Observer{
 
   update(){
     super.update();
-  document.getElementById('chat1').innerHTML = this.model.player1;
+
 
   }
 
@@ -66,6 +66,17 @@ class MemoryView  extends Observer{
    hideName() {
      document.getElementById('form-group2').style.display = "none";
   }
+
+  setTransparent(){
+    document.getElementById('').style.opacity = "0.0";
+  }
+
+  showMessage(msg){
+
+    document.getElementById('backAndTime').innerHTML = "Je hebt gewonnen"
+
+  }
+
 
 
 }

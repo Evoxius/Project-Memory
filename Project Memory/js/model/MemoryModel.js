@@ -10,4 +10,20 @@ class MemoryModel extends Observable {
       this.player1 = n1; this.player2 = n2;
       this.notify();
     }
+
+    maakSpeelveld(){
+      new Card(1);
+      console.log("model werkt");
+      // document.getElementById('card1').style.backgroundImage = "url(img/Groep4/Donald.jpg)"
+    }
+
+    maakKaart(){
+
+    }
+
+    FlipKaart(kaartID){
+
+    }
+
+
 }
