@@ -9,7 +9,12 @@ class MemoryView  extends Observer{
 
   update(){
     super.update();
+<<<<<<< HEAD
 
+=======
+  document.getElementById('chat1').innerHTML = this.model.player1Naam;
+  document.getElementById('chat2').innerHTML = this.model.player2Naam;
+>>>>>>> a20173100e123d272492148e08749effda290204
 
   }
 
@@ -67,6 +72,7 @@ class MemoryView  extends Observer{
      document.getElementById('form-group2').style.display = "none";
   }
 
+<<<<<<< HEAD
   setTransparent(){
     document.getElementById('').style.opacity = "0.0";
   }
@@ -78,5 +84,11 @@ class MemoryView  extends Observer{
   }
 
 
+=======
+  showMessage(message) {
+    document.querySelector('div>p').innerHTML = message;
+  }
+
+>>>>>>> a20173100e123d272492148e08749effda290204
 
 }
