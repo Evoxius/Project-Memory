@@ -21,7 +21,7 @@ class MemoryController {
       else {
         this.view.showDivGroep4();
       }
-    this.model.maakSpeelveld1();
+    this.model.maakSpeelveld();
     console.log(e.srcElement.id);
     }
 
