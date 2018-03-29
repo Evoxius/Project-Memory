@@ -22,8 +22,15 @@ class MemoryModel extends Observable {
     maakSpeelveld(){
       if(document.getElementById('groep8').checked)
       {
-
-      }
+        this.contentArray = [7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18, 19, 19, 20, 20, 21, 21, 22, 22, 23, 23, 24, 24]
+        this.contentArray = this.shuffle(this.contentArray);
+        console.log(this.contentArray);
+        this.cardArray = []
+        for (var i = 0; i < this.contentArray.length; i++) {
+          this.cardArray.push(new Card(this.contentArray[i]));
+        }
+        console.log(this.cardArray)
+        }
       else{
         this.contentArray = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
         this.contentArray = this.shuffle(this.contentArray);
@@ -48,8 +55,7 @@ class MemoryModel extends Observable {
         document.getElementById('card12').style.backgroundImage = this.cardArray[11].afbeeldingsrc;
         document.getElementById('card13').style.backgroundImage = this.cardArray[12].afbeeldingsrc;
         document.getElementById('card14').style.backgroundImage = this.cardArray[13].afbeeldingsrc;
-
-    }
+      }
 
     shuffle(array){
       this.currentIndex = array.length;
