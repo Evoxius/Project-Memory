@@ -34,8 +34,6 @@ class Card extends Observable{
       case 23:this.afbeeldingsrc = "url(../../img/Groep8/train.jpg)";break;
       case 24:this.afbeeldingsrc = "url(../../img/Groep8/trash.jpg)";break;
     }
-    document.getElementById('card'+(afbeeldingId+1)).style.backgroundImage = this.afbeeldingsrc;
-    document.getElementById('cards'+(afbeeldingId+1)).style.backgroundImage = this.afbeeldingsrc;
 
   }
 
