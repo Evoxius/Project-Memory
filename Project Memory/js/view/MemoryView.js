@@ -72,12 +72,6 @@ class MemoryView  extends Observer{
     document.getElementById('').style.opacity = "0.0";
   }
 
-  showMessage(msg){
-
-    document.getElementById('backAndTime').innerHTML = "Je hebt gewonnen"
-
-  }
-
   showMessage(message) {
     document.querySelector('div>p').innerHTML = message;
   }
