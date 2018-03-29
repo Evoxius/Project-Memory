@@ -11,7 +11,6 @@ class MemoryView  extends Observer{
     super.update();
   document.getElementById('chat1').innerHTML = this.model.player1Naam;
   document.getElementById('chat2').innerHTML = this.model.player2Naam;
-
   }
 
   // Door deze code kan de speler groep 4 kiezen en met 14 kaarten spelen.
