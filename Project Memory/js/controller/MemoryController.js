@@ -6,8 +6,17 @@ class MemoryController {
         document.getElementById("backToStart").addEventListener("click", (e)=> {this.view.showStart();});
         document.getElementById("multiplayer").addEventListener("click", (e)=> {this.view.showName();});
         document.getElementById("timed").addEventListener("click", (e)=> {this.view.hideName();});
-        document.getElementById("speler1").addEventListener("click", (e)=> {this.view.showModal();});
-        document.getElementById("speler2").addEventListener("click", (e)=> {this.view.showModal();});
+        document.getElementById("speler1").addEventListener("click", (e)=> {this.view.showModal1();});
+        document.getElementById("speler2").addEventListener("click", (e)=> {this.view.showModal2();});
+        document.getElementById('profile1').addEventListener('click', (e)=> {this.view.changeImage(0);});
+        document.getElementById('profile2').addEventListener('click', (e)=> {this.view.changeImage(1);});
+        document.getElementById('profile3').addEventListener('click', (e)=> {this.view.changeImage(2);});
+        document.getElementById('profile4').addEventListener('click', (e)=> {this.view.changeImage(3);});
+        document.getElementById('profile5').addEventListener('click', (e)=> {this.view.changeImage2(0);});
+        document.getElementById('profile6').addEventListener('click', (e)=> {this.view.changeImage2(1);});
+        document.getElementById('profile7').addEventListener('click', (e)=> {this.view.changeImage2(2);});
+        document.getElementById('profile8').addEventListener('click', (e)=> {this.view.changeImage2(3);});
+
     }
 
     // Door deze code wordt bevestigd welke groep jij als de speler hebt gekozen, de groep 4 of 8 wordt dan uitgevoerd als een spel.

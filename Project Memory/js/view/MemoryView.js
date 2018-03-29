@@ -18,13 +18,13 @@ class MemoryView  extends Observer{
   showDivGroep4(){
     document.getElementById('container').style.display = "block";
     document.getElementById('container2').style.display = "none";
-    for (var i = 1; i < 37; i++) {
+    for (let i = 1; i < 37; i++) {
       document.getElementById('cards' + i).style.display = "none";
     }
-    for (var i = 1; i < 15; i++) {
+    for (let i = 1; i < 15; i++) {
       document.getElementById('card' + i).style.display = "block";
     }
-    for (var i = 0; i < document.getElementsByClassName('card').length; i++) {
+    for (let i = 0; i < document.getElementsByClassName('card').length; i++) {
       document.getElementsByClassName('card')[i].style.width = "10%";
       document.getElementsByClassName('card')[i].style.height = "150px";
       document.getElementsByClassName('card')[i].style.margin = "60px 50px 0px 10px";
@@ -36,13 +36,13 @@ class MemoryView  extends Observer{
   showDivGroep8() {
      document.getElementById('container').style.display = "block";
      document.getElementById('container2').style.display = "none";
-     for (var i = 1; i < 37; i++) {
+     for (let i = 1; i < 37; i++) {
        document.getElementById('cards' + i).style.display = "block";
      }
-     for (var i = 1; i < 15; i++) {
+     for (let i = 1; i < 15; i++) {
        document.getElementById('card' + i).style.display = "none";
      }
-     for (var i = 0; i < document.getElementsByClassName('card2').length; i++) {
+     for (let i = 0; i < document.getElementsByClassName('card2').length; i++) {
        document.getElementsByClassName('card2')[i].style.width = "7%";
        document.getElementsByClassName('card2')[i].style.height = "105px";
        document.getElementsByClassName('card2')[i].style.margin = "20px 50px 0px 10px";
@@ -67,14 +67,14 @@ class MemoryView  extends Observer{
      document.getElementById('form-group2').style.display = "none";
   }
 
-  showModal(){
+  showModal1(){
           // Get the modal
-      var modal = document.getElementById('myModal');
+      let modal = document.getElementById('myModal');
 
       // Get the image and insert it inside the modal - use its "alt" text as a caption
-      var img = document.getElementById('speler1');
-      var modalImg = document.getElementById("speler1");
-      var captionText = document.getElementById("caption");
+      let img = document.getElementById('speler1');
+      let modalImg = document.getElementById("speler1");
+      let captionText = document.getElementById("caption");
       img.onclick = function(){
           modal.style.display = "block";
           modalImg.src = this.src;
@@ -82,13 +82,65 @@ class MemoryView  extends Observer{
       }
 
       // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
+      let span = document.getElementsByClassName("close")[0];
 
       // When the user clicks on <span> (x), close the modal
       span.onclick = function() {
           modal.style.display = "none";
       }
   }
+
+  showModal2(){
+          // Get the modal
+      let modal = document.getElementById('myModal');
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      let img = document.getElementById('speler2');
+      let modalImg = document.getElementById("speler2");
+      let captionText = document.getElementById("caption");
+      img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = document.getElementById("caption").innerHTML;
+      }
+
+      // Get the <span> element that closes the modal
+      let span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+  }
+
+  changeImage(change){
+        let pic = document.getElementById('speler1');
+        let modal = document.getElementById('myModal');
+
+        switch (change){
+        case 0: pic.src = "img/profiel1.jpg"; break;
+        case 1: pic.src = "img/profiel2.jpg"; break;
+        case 2: pic.src = "img/profiel3.png"; break;
+        case 3: pic.src = "img/profiel4.jpg"; break;
+      }
+        modal.style.display = "none";
+        
+  }
+
+  changeImage2(change){
+        let pic = document.getElementById('speler2');
+        let modal = document.getElementById('myModal');
+
+        switch (change){
+        case 0: pic.src = "img/profiel1.jpg"; break;
+        case 1: pic.src = "img/profiel2.jpg"; break;
+        case 2: pic.src = "img/profiel3.png"; break;
+        case 3: pic.src = "img/profiel4.jpg"; break;
+      }
+
+        modal.style.display = "none";
+  }
+
 
   setTransparent(){
     document.getElementById('').style.opacity = "0.0";

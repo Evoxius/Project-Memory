@@ -60,13 +60,11 @@ body {
 	box-shadow: 2px 2px 1px black;
 	color: white;
 	background: #ffffff;
-	background-image: url("../img/persoon.png");
 	background-repeat: repeat-x, repeat;
 	min-height: 175px;
 	float:right;
 	cursor:pointer;
 	border-radius: 5px;
-	cursor: pointer;
 	transition: 0.3s;
 
 }
@@ -89,13 +87,13 @@ body {
 }
 
 /* Modal Content (Image) */
-.modal-content {
+.imageContainer {
     margin: auto;
     display: inline-block;
-    width: 15%;
     max-width: 200px;
-		min-height:173px;
+		height:173px;
 		float:right;
+		margin-right: 50px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -112,20 +110,10 @@ body {
 
 #images {
     margin-right: 650px;
-		min-height: 173px;
+		transform: scale(1.0);
+		cursor:pointer;
 }
 
-
-/* Add Animation - Zoom in the Modal */
-.modal-content, #caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-}
 
 /* The Close Button */
 .close {
@@ -227,13 +215,11 @@ body {
 	box-shadow: 2px 2px 1px black;
 	color: white;
 	background: #ffffff;
-	background-image: url("../img/persoon.png");
 	background-repeat: repeat-x, repeat;
 	min-height: 175px;
 	float:left;
 	cursor:pointer;
 	border-radius: 5px;
-	cursor: pointer;
 	transition: 0.3s;
 
 }
