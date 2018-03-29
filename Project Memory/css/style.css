@@ -77,8 +77,8 @@ body {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    z-index: 0; /* Sit on top */
+    padding-top: 300px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -91,9 +91,11 @@ body {
 /* Modal Content (Image) */
 .modal-content {
     margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
+    display: inline-block;
+    width: 15%;
+    max-width: 200px;
+		min-height:173px;
+		float:right;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -105,8 +107,14 @@ body {
     text-align: center;
     color: #ccc;
     padding: 10px 0;
-    height: 150px;
+    height: 80px;
 }
+
+#images {
+    margin-right: 650px;
+		min-height: 173px;
+}
+
 
 /* Add Animation - Zoom in the Modal */
 .modal-content, #caption {
