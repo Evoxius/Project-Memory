@@ -2,7 +2,6 @@ class Card extends Observable{
 
   constructor(afbeeldingId){
     super();
-    console.log("hij werkt");
     this.afbeelding = afbeeldingId;
     this.isClosed = true;
     this.isClickable = true;
