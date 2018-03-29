@@ -14,7 +14,7 @@ class MemoryModel extends Observable {
       this.notify();
     }
 
-    maakSpeelveld1(){
+    maakSpeelveld(){
       new Card(0);
       new Card(1);
       new Card(2);
@@ -23,33 +23,7 @@ class MemoryModel extends Observable {
       new Card(5);
       new Card(6);
 
-      console.log("model1 werkt");
-      // document.getElementById('card1').style.backgroundImage = "url(img/Groep4/Donald.jpg)"
-    }
-
-    maakSpeelveld2(){
-      new Card(7);
-      new Card(8);
-      new Card(9);
-      new Card(10);
-      new Card(11);
-      new Card(12);
-      new Card(13);
-      new Card(14);
-      new Card(15);
-      new Card(16);
-      new Card(17);
-      new Card(18);
-      new Card(19);
-      new Card(20);
-      new Card(21);
-      new Card(22);
-      new Card(23);
-      new Card(24);
-
-
-
-      console.log("model2 werkt");
+      console.log("model werkt");
       // document.getElementById('card1').style.backgroundImage = "url(img/Groep4/Donald.jpg)"
     }
 

@@ -17,13 +17,11 @@ class MemoryController {
 
       if (document.getElementById('groep8').checked) {
         this.view.showDivGroep8();
-        this.model.maakSpeelveld2();
       }
       else {
         this.view.showDivGroep4();
-        this.model.maakSpeelveld1();
       }
-
+    this.model.maakSpeelveld1();
     console.log(e.srcElement.id);
     }
 
