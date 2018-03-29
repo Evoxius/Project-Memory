@@ -3,6 +3,7 @@ class MemoryModel extends Observable {
       super();
       this.player1Naam;
       this.player2Naam;
+      this.contentArray;
       this.cardArray;
       this.currentIndex;
       this.temporaryValue;
@@ -19,23 +20,35 @@ class MemoryModel extends Observable {
     }
 
     maakSpeelveld(){
-      var i = 1
       if(document.getElementById('groep8').checked)
       {
 
       }
       else{
-        this.cardArray = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
-        this.cardArray = this.shuffle(this.cardArray);
-        console.log(this.cardArray);
+        this.contentArray = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
+        this.contentArray = this.shuffle(this.contentArray);
+        console.log(this.contentArray);
+        this.cardArray = []
+        for (var i = 0; i < this.contentArray.length; i++) {
+          this.cardArray.push(new Card(this.contentArray[i]));
         }
-      // new Card(0);
-      // new Card(1);
-      // new Card(2);
-      // new Card(3);
-      // new Card(4);
-      // new Card(5);
-      // new Card(6);
+        console.log(this.cardArray)
+        }
+        document.getElementById('card1').style.backgroundImage = this.cardArray[0].afbeeldingsrc;
+        document.getElementById('card2').style.backgroundImage = this.cardArray[1].afbeeldingsrc;
+        document.getElementById('card3').style.backgroundImage = this.cardArray[2].afbeeldingsrc;
+        document.getElementById('card4').style.backgroundImage = this.cardArray[3].afbeeldingsrc;
+        document.getElementById('card5').style.backgroundImage = this.cardArray[4].afbeeldingsrc;
+        document.getElementById('card6').style.backgroundImage = this.cardArray[5].afbeeldingsrc;
+        document.getElementById('card7').style.backgroundImage = this.cardArray[6].afbeeldingsrc;
+        document.getElementById('card8').style.backgroundImage = this.cardArray[7].afbeeldingsrc;
+        document.getElementById('card9').style.backgroundImage = this.cardArray[8].afbeeldingsrc;
+        document.getElementById('card10').style.backgroundImage = this.cardArray[9].afbeeldingsrc;
+        document.getElementById('card11').style.backgroundImage = this.cardArray[10].afbeeldingsrc;
+        document.getElementById('card12').style.backgroundImage = this.cardArray[11].afbeeldingsrc;
+        document.getElementById('card13').style.backgroundImage = this.cardArray[12].afbeeldingsrc;
+        document.getElementById('card14').style.backgroundImage = this.cardArray[13].afbeeldingsrc;
+
     }
 
     shuffle(array){
