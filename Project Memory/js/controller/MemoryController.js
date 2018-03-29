@@ -6,6 +6,8 @@ class MemoryController {
         document.getElementById("backToStart").addEventListener("click", (e)=> {this.view.showStart();});
         document.getElementById("multiplayer").addEventListener("click", (e)=> {this.view.showName();});
         document.getElementById("timed").addEventListener("click", (e)=> {this.view.hideName();});
+        document.getElementById("speler1").addEventListener("click", (e)=> {this.view.showModal();});
+        document.getElementById("speler2").addEventListener("click", (e)=> {this.view.showModal();});
     }
 
     // Door deze code wordt bevestigd welke groep jij als de speler hebt gekozen, de groep 4 of 8 wordt dan uitgevoerd als een spel.
