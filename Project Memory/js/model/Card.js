@@ -7,13 +7,13 @@ class Card extends Observable{
     this.isClosed = true;
     this.isClickable = true;
     switch (afbeeldingId) {
-      case 0:this.afbeeldingsrc = "url(../../img/Groep4/Donald.jpg)";break;
-      case 1:this.afbeeldingsrc = "url(../../img/Groep4/elsa.png)";break;
-      case 2:this.afbeeldingsrc = "url(../../img/Groep4/mermaid.png)";break;
-      case 3:this.afbeeldingsrc = "url(../../img/Groep4/Mickey.png)";break;
-      case 4:this.afbeeldingsrc = "url(../../img/Groep4/pooh.jpg)";break;
-      case 5:this.afbeeldingsrc = "url(../../img/Groep4/simba.png)";break;
-      case 6:this.afbeeldingsrc = "url(../../img/Groep4/woody.png)";break;
+      case 0:this.afbeeldingsrc = "url(img/Groep4/Donald.jpg)";break;
+      case 1:this.afbeeldingsrc = "url(img/Groep4/elsa.png)";break;
+      case 2:this.afbeeldingsrc = "url(img/Groep4/mermaid.png)";break;
+      case 3:this.afbeeldingsrc = "url(img/Groep4/Mickey.png)";break;
+      case 4:this.afbeeldingsrc = "url(img/Groep4/pooh.jpg)";break;
+      case 5:this.afbeeldingsrc = "url(img/Groep4/simba.png)";break;
+      case 6:this.afbeeldingsrc = "url(img/Groep4/woody.png)";break;
 
       case 7:this.afbeeldingsrc = "url(../../img/Groep8/airballoon.png)";break;
       case 8:this.afbeeldingsrc = "url(../../img/Groep8/ambulance.jpg)";break;
