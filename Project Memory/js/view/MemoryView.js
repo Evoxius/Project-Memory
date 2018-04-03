@@ -159,8 +159,6 @@ class MemoryView  extends Observer{
         modal.style.display = "none";
   }
 
-}
-
   // Door deze code kan speler2 klikken op verschillende afbeeldingen en de profielfoto wordt veranderdt
 
 
@@ -174,9 +172,7 @@ class MemoryView  extends Observer{
         case 2: pic.src = "img/profiel3.png"; break;
         case 3: pic.src = "img/profiel4.jpg"; break;
       }
-
         modal.style.display = "none";
-
   }
 
   // Door deze code kan iets transparent worden.
