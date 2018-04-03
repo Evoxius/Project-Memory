@@ -24,7 +24,6 @@ class MemoryController {
     reageerOpStartSpel(e){
       e = window.event;
       this.model.setNames();
-      this.view.showMessage(this.model.player1Naam + " is aan de beurt.");
 
       if (document.getElementById('groep8').checked) {
         this.view.showDivGroep8();
@@ -32,14 +31,14 @@ class MemoryController {
       else {
         this.view.showDivGroep4();
       }
-    this.model.maakSpeelveld();
-    console.log(e.srcElement.id);
-    }
+      this.model.maakSpeelveld();
+      this.view.showMessage(this.model.player1Naam + " is aan de beurt.");
+      console.log(e.srcElement.id);
+      }
 
     reageerOpKlikKaart(e){
       e = window.event;
-
-
+      
     }
 
 
