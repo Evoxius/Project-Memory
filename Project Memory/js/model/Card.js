@@ -42,5 +42,9 @@ class Card extends Observable{
     this.notify();
   }
 
+  getSrc(){
+    return this.afbeeldingsrc;
+  }
+
 
 }

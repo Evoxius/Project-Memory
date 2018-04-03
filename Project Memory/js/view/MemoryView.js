@@ -1,18 +1,27 @@
 class MemoryView  extends Observer{
 
-    constructor(model){
-      super(model);
-      this.model = model;
-
-      this.model.addObserver(this);
+  constructor(model){
+    super(model);
+    this.model = model;
+    this.model.addObserver(this);
   }
 
   // Door deze code worden de namen van speler 1 en speler 2 in real-time geplaatst op de goede plek.
 
   update(){
     super.update();
-  document.getElementById('chat1').innerHTML = this.model.player1Naam;
-  document.getElementById('chat2').innerHTML = this.model.player2Naam;
+    document.getElementById('chat1').innerHTML = this.model.player1Naam;
+    document.getElementById('chat2').innerHTML = this.model.player2Naam;
+    if(document.getElementById('groep8').checked){
+      for (var i = 0; i < this.model.cardArray.length; i++) {
+        document.getElementById('cards'+(i+1)).style.backgroundImage = this.model.cardArray[i].getSrc()
+      }
+    }
+    else{
+      for (var i = 0; i < this.model.cardArray.length; i++) {
+        document.getElementById('card'+(i+1)).style.backgroundImage = this.model.cardArray[i].getSrc()
+      }
+    }
   }
 
   // Door deze code kan de speler groep 4 kiezen en met 14 kaarten spelen.
@@ -149,7 +158,10 @@ class MemoryView  extends Observer{
       }
         modal.style.display = "none";
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 8d76bb03baa2ac4aa7ba51d218d1090d60db83b4
   }
 
   // Door deze code kan speler2 klikken op verschillende afbeeldingen en de profielfoto wordt veranderdt
