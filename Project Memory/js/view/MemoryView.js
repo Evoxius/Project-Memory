@@ -7,6 +7,8 @@ class MemoryView  extends Observer{
       this.model.addObserver(this);
   }
 
+  // Door deze code worden de namen van speler 1 en speler 2 in real-time geplaatst op de goede plek.
+
   update(){
     super.update();
   document.getElementById('chat1').innerHTML = this.model.player1Naam;
@@ -67,6 +69,8 @@ class MemoryView  extends Observer{
      document.getElementById('form-group2').style.display = "none";
   }
 
+  // Door deze code wordt de scherm van speler1 gemaakt waar speler1 zijn/haar profielfoto kan veranderen.
+
   showModal1(){
           // Get the modal
       let modal = document.getElementById('myModal');
@@ -97,6 +101,8 @@ class MemoryView  extends Observer{
           modal.style.display = "none";
       }
   }
+
+  // Door deze code wordt de scherm van speler2 gemaakt waar speler2 zijn/haar profielfoto kan veranderen.
 
   showModal2(){
           // Get the modal
@@ -129,6 +135,8 @@ class MemoryView  extends Observer{
       }
   }
 
+  // Door deze code kan speler1 klikken op verschillende afbeeldingen en de profielfoto wordt veranderdt
+
   changeImage(change){
         let pic = document.getElementById('speler1');
         let modal = document.getElementById('myModal');
@@ -143,6 +151,9 @@ class MemoryView  extends Observer{
 
 
   }
+
+  // Door deze code kan speler2 klikken op verschillende afbeeldingen en de profielfoto wordt veranderdt
+
 
   changeImage2(change){
         let pic = document.getElementById('speler2');
@@ -159,10 +170,13 @@ class MemoryView  extends Observer{
 
   }
 
+  // Door deze code kan iets transparent worden.
 
   setTransparent(){
     document.getElementById('').style.opacity = "0.0";
   }
+
+  // Door deze code kunnen de spelers zien wie aan de beurt is en meer.
 
   showMessage(message) {
     document.querySelector('div>p').innerHTML = message;
