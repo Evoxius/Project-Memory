@@ -157,13 +157,7 @@ class MemoryView  extends Observer{
         case 3: pic.src = "img/profiel4.jpg"; break;
       }
         modal.style.display = "none";
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 8d76bb03baa2ac4aa7ba51d218d1090d60db83b4
-  }
-
+}
   // Door deze code kan speler2 klikken op verschillende afbeeldingen en de profielfoto wordt veranderdt
 
 
