@@ -64,8 +64,9 @@ class MemoryModel extends Observable {
 
     }
 
-    FlipKaart(kaartID){
-
+    flipKaart(kaartID){
+      this.cardArray[kaartID].omdraaien();
+      this.notify();
     }
 
 

@@ -45,7 +45,7 @@ class MemoryController {
 
     reageerOpKlikKaart(e){
       e = window.event;
-      console.log(e.path[0].id);
+      this.model.flipKaart(Number(e.path[0].id.match(/\d/g).join("")) - 1);
 
     }
 
