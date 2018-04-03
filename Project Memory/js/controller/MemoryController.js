@@ -17,6 +17,13 @@ class MemoryController {
         document.getElementById('profile7').addEventListener('click', (e)=> {this.view.changeImage2(2);});
         document.getElementById('profile8').addEventListener('click', (e)=> {this.view.changeImage2(3);});
 
+        for (var i = 0; i < 14; i++) {
+          document.getElementById('card'+(1+i)).addEventListener('click', (e)=> {this.reageerOpKlikKaart();});
+        }
+        for (var i = 0; i < 36; i++) {
+          document.getElementById('cards'+(1+i)).addEventListener('click', (e)=> {this.reageerOpKlikKaart();});
+        }
+
     }
 
     // Door deze code wordt bevestigd welke groep jij als de speler hebt gekozen, de groep 4 of 8 wordt dan uitgevoerd als een spel.
@@ -38,7 +45,8 @@ class MemoryController {
 
     reageerOpKlikKaart(e){
       e = window.event;
-      
+      console.log(e.path[0].id);
+
     }
 
 

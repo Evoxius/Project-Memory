@@ -43,7 +43,17 @@ class Card extends Observable{
   }
 
   getSrc(){
-    return this.afbeeldingsrc;
+    if (!this.isClosed){
+    return this.afbeelding;
+    }
+    else {
+      if(this.afbeelding<7){
+        return "url(img/disneylogo.png)";
+      }
+      else {
+        return "url(img/roundabout.jpg)";
+      }
+    }
   }
 
 
