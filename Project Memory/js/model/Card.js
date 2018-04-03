@@ -14,7 +14,7 @@ class Card extends Observable{
       case 5:this.afbeeldingsrc = "url(img/Groep4/simba.png)";break;
       case 6:this.afbeeldingsrc = "url(img/Groep4/woody.png)";break;
 
-      case 7:this.afbeeldingsrc = "url(img/Groep8/airballoon.png)";break;
+      case 7:this.afbeeldingsrc = "url(img/Groep8/airballoon.jpg)";break;
       case 8:this.afbeeldingsrc = "url(img/Groep8/ambulance.jpg)";break;
       case 9:this.afbeeldingsrc = "url(img/Groep8/bigship.jpg)";break;
       case 10:this.afbeeldingsrc = "url(img/Groep8/bike.jpg)";break;

@@ -155,6 +155,7 @@ class MemoryView  extends Observer{
         case 1: pic.src = "img/profiel2.jpg"; break;
         case 2: pic.src = "img/profiel3.png"; break;
         case 3: pic.src = "img/profiel4.jpg"; break;
+        case 4: pic.src = document.getElementById('upfile').src; break;
       }
         modal.style.display = "none";
   }
@@ -171,6 +172,7 @@ class MemoryView  extends Observer{
         case 1: pic.src = "img/profiel2.jpg"; break;
         case 2: pic.src = "img/profiel3.png"; break;
         case 3: pic.src = "img/profiel4.jpg"; break;
+        case 4: pic.src = document.getElementById('upfile').src; break;
       }
         modal.style.display = "none";
   }
