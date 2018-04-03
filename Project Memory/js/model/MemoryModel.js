@@ -13,10 +13,14 @@ class MemoryModel extends Observable {
       this.aantalAfbeeldingen = 0;
     }
 
+     // Hierdoor wordt de naam gezet.
+
     setNames(){
       this.player1Naam = document.getElementById("usr1").value;
       this.player2Naam = document.getElementById("usr2").value;
     }
+
+    // Door deze code wordt de speelveld van eerst groep 8 aangemaakt als groep8 aangeklikt is. Anders wordt de speelveld van groep 4 aangemaakt met 14 kaarten.
 
     maakSpeelveld(){
       if(document.getElementById('groep8').checked)
