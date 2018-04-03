@@ -16,7 +16,6 @@ class MemoryModel extends Observable {
     setNames(){
       this.player1Naam = document.getElementById("usr1").value;
       this.player2Naam = document.getElementById("usr2").value;
-      this.notify();
     }
 
     maakSpeelveld(){
@@ -41,20 +40,7 @@ class MemoryModel extends Observable {
         }
         console.log(this.cardArray)
         }
-        document.getElementById('card1').style.backgroundImage = this.cardArray[0].afbeeldingsrc;
-        document.getElementById('card2').style.backgroundImage = this.cardArray[1].afbeeldingsrc;
-        document.getElementById('card3').style.backgroundImage = this.cardArray[2].afbeeldingsrc;
-        document.getElementById('card4').style.backgroundImage = this.cardArray[3].afbeeldingsrc;
-        document.getElementById('card5').style.backgroundImage = this.cardArray[4].afbeeldingsrc;
-        document.getElementById('card6').style.backgroundImage = this.cardArray[5].afbeeldingsrc;
-        document.getElementById('card7').style.backgroundImage = this.cardArray[6].afbeeldingsrc;
-        document.getElementById('card8').style.backgroundImage = this.cardArray[7].afbeeldingsrc;
-        document.getElementById('card9').style.backgroundImage = this.cardArray[8].afbeeldingsrc;
-        document.getElementById('card10').style.backgroundImage = this.cardArray[9].afbeeldingsrc;
-        document.getElementById('card11').style.backgroundImage = this.cardArray[10].afbeeldingsrc;
-        document.getElementById('card12').style.backgroundImage = this.cardArray[11].afbeeldingsrc;
-        document.getElementById('card13').style.backgroundImage = this.cardArray[12].afbeeldingsrc;
-        document.getElementById('card14').style.backgroundImage = this.cardArray[13].afbeeldingsrc;
+        this.notify();
       }
 
     shuffle(array){
