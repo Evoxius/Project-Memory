@@ -44,7 +44,7 @@ class Card extends Observable{
 
   getSrc(){
     if (!this.isClosed){
-    return this.afbeelding;
+    return this.afbeeldingsrc;
     }
     else {
       if(this.afbeelding<7){

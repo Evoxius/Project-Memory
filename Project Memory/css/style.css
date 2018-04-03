@@ -114,26 +114,30 @@ body {
 		cursor:pointer;
 }
 
-#yourBtn {	
+#yourBtn {
     margin-left: 300px;
     margin-top: 250px;
 }
 
-
-/* The Close Button */
 .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+	position: absolute;
+	top: 50px;
+	right: 60px;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+  float: right;
+  font-size: $close-font-size;
+  font-weight: $close-font-weight;
+  line-height: 1;
+  color: red;
+  text-shadow: $close-text-shadow;
+  opacity: .5;
+  }
 
 .close:hover,
 .close:focus {
-    color: #bbb;
+    color: red;
     text-decoration: none;
     cursor: pointer;
 }
