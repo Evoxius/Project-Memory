@@ -114,6 +114,11 @@ body {
 		cursor:pointer;
 }
 
+#yourBtn {	
+    margin-left: 300px;
+    margin-top: 250px;
+}
+
 
 /* The Close Button */
 .close {
