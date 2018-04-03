@@ -75,6 +75,14 @@ class MemoryView  extends Observer{
       let img = document.getElementById('speler1');
       let modalImg = document.getElementById("speler1");
       let captionText = document.getElementById("caption");
+      document.getElementById('profile1').style.display = "block"
+      document.getElementById('profile2').style.display = "block"
+      document.getElementById('profile3').style.display = "block"
+      document.getElementById('profile4').style.display = "block"
+      document.getElementById('profile5').style.display = "none"
+      document.getElementById('profile6').style.display = "none"
+      document.getElementById('profile7').style.display = "none"
+      document.getElementById('profile8').style.display = "none"
       img.onclick = function(){
           modal.style.display = "block";
           modalImg.src = this.src;
@@ -98,6 +106,14 @@ class MemoryView  extends Observer{
       let img = document.getElementById('speler2');
       let modalImg = document.getElementById("speler2");
       let captionText = document.getElementById("caption");
+      document.getElementById('profile1').style.display = "none"
+      document.getElementById('profile2').style.display = "none"
+      document.getElementById('profile3').style.display = "none"
+      document.getElementById('profile4').style.display = "none"
+      document.getElementById('profile5').style.display = "block"
+      document.getElementById('profile6').style.display = "block"
+      document.getElementById('profile7').style.display = "block"
+      document.getElementById('profile8').style.display = "block"
       img.onclick = function(){
           modal.style.display = "block";
           modalImg.src = this.src;
@@ -124,7 +140,8 @@ class MemoryView  extends Observer{
         case 3: pic.src = "img/profiel4.jpg"; break;
       }
         modal.style.display = "none";
-        
+
+
   }
 
   changeImage2(change){
@@ -139,6 +156,7 @@ class MemoryView  extends Observer{
       }
 
         modal.style.display = "none";
+
   }
 
 
