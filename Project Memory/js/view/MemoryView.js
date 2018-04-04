@@ -15,11 +15,20 @@ class MemoryView  extends Observer{
     if(document.getElementById('groep8').checked){
       for (var i = 0; i < this.model.cardArray.length; i++) {
         document.getElementById('cards'+(i+1)).style.backgroundImage = this.model.cardArray[i].getSrc()
+        if(this.model.cardArray[i].getTransparent()){
+          this.setTransparent(i);
+        }
+        else{
+          this.setOpaque(i)
+        }
       }
     }
     else{
       for (var i = 0; i < this.model.cardArray.length; i++) {
         document.getElementById('card'+(i+1)).style.backgroundImage = this.model.cardArray[i].getSrc()
+        if(this.model.cardArray[i].getTransparent()){
+          this.setTransparent(i);
+        }
       }
     }
   }
@@ -179,8 +188,18 @@ class MemoryView  extends Observer{
 
   // Door deze code kan iets transparent worden.
 
-  setTransparent(){
-    document.getElementById('').style.opacity = "0.0";
+  setTransparent(number){
+    document.getElementById('card'+(number+1)).style.opacity = "0.0";
+    document.getElementById('cards'+(number+1)).style.opacity = "0.0";
+    document.getElementById('card'+(number+1)).style.cursor = "default";
+    document.getElementById('cards'+(number+1)).style.cursor = "default";
+  }
+
+  setOpaque(number){
+    document.getElementById('card'+(number+1)).style.opacity = "1";
+    document.getElementById('cards'+(number+1)).style.opacity = "1";
+    document.getElementById('card'+(number+1)).style.cursor = "pointer";
+    document.getElementById('cards'+(number+1)).style.cursor = "pointer";
   }
 
   // Door deze code kunnen de spelers zien wie aan de beurt is en meer.

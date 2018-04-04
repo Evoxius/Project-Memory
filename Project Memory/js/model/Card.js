@@ -5,6 +5,7 @@ class Card extends Observable{
     this.afbeelding = afbeeldingId;
     this.isClosed = true;
     this.isClickable = true;
+    this.transparent = false;
     switch (afbeeldingId) {
       case 0:this.afbeeldingsrc = "url(img/Groep4/Donald.jpg)";break;
       case 1:this.afbeeldingsrc = "url(img/Groep4/elsa.png)";break;
@@ -35,6 +36,14 @@ class Card extends Observable{
     }
     this.notify();
 
+  }
+
+  setTransparent(){
+    this.transparent = true;
+  }
+
+  getTransparent(){
+    return this.transparent;
   }
 
   omdraaien(){
