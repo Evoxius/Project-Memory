@@ -15,11 +15,20 @@ class MemoryView  extends Observer{
     if(document.getElementById('groep8').checked){
       for (var i = 0; i < this.model.cardArray.length; i++) {
         document.getElementById('cards'+(i+1)).style.backgroundImage = this.model.cardArray[i].getSrc()
+        if(this.model.cardArray[i].getTransparent()){
+          this.setTransparent("cards"+(i+1));
+        }
+        else{
+          this.setOpaque(i)
+        }
       }
     }
     else{
       for (var i = 0; i < this.model.cardArray.length; i++) {
         document.getElementById('card'+(i+1)).style.backgroundImage = this.model.cardArray[i].getSrc()
+        if(this.model.cardArray[i].getTransparent()){
+          this.setTransparent("card"+(i+1));
+        }
       }
     }
   }
@@ -179,8 +188,14 @@ class MemoryView  extends Observer{
 
   // Door deze code kan iets transparent worden.
 
-  setTransparent(){
-    document.getElementById('').style.opacity = "0.0";
+  setTransparent(id){
+    document.getElementById(id).style.opacity = "0.0";
+    document.getElementById(id).style.cursor = "default";
+  }
+
+  setOpaque(number){
+    document.getElementById(id).style.opacity = "1";
+    document.getElementById(id).style.cursor = "pointer";
   }
 
   // Door deze code kunnen de spelers zien wie aan de beurt is en meer.
