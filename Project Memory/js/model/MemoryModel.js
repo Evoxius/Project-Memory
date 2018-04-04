@@ -83,14 +83,8 @@ class MemoryModel extends Observable {
         this.guess1Id = kaartID;
       }
       this.notify();
-<<<<<<< HEAD
     }
-
-
-=======
-    } 
->>>>>>> 135182a7b562b3a7a03d9f6e4a6e608f385acc5d
-
+ 
 
     eindTimeout(){
       if(this.contentArray[this.guess2Id] == this.contentArray[this.guess1Id])
