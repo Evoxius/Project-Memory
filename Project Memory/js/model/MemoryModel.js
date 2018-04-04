@@ -68,6 +68,8 @@ class MemoryModel extends Observable {
       {
         if(this.cardArray[kaartID].getClickable() && this.timeoutLock == false){
           this.guess2Id = kaartID;
+          var audio = new Audio('flip.mp3');
+          audio.play();
           this.timeoutLock = true;
           this.cardArray[kaartID].omdraaien();
           window.setTimeout(this.eindTimeout.bind(this),2000);
@@ -75,16 +77,14 @@ class MemoryModel extends Observable {
       }
       else if(this.cardArray[kaartID].getClickable()){
         this.cardArray[kaartID].omdraaien();
+        var audio = new Audio('flip.mp3');
+        audio.play();
         this.cardArray[kaartID].setUnclickable();
         this.guess1Id = kaartID;
       }
-<<<<<<< HEAD
-        this.notify();
-=======
       this.notify();
->>>>>>> d62b966a85e5bbc0a92ad1eef4b05df3433fef3f
     }
-  }
+
 
 
 
