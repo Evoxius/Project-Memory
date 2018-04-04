@@ -19,7 +19,7 @@ class MemoryView  extends Observer{
           this.setTransparent("cards"+(i+1));
         }
         else{
-          this.setOpaque(i)
+          this.setOpaque("cards"+(i+1))
         }
       }
     }
@@ -28,6 +28,9 @@ class MemoryView  extends Observer{
         document.getElementById('card'+(i+1)).style.backgroundImage = this.model.cardArray[i].getSrc()
         if(this.model.cardArray[i].getTransparent()){
           this.setTransparent("card"+(i+1));
+        }
+        else{
+          this.setOpaque("card"+(i+1))
         }
       }
     }
@@ -193,7 +196,7 @@ class MemoryView  extends Observer{
     document.getElementById(id).style.cursor = "default";
   }
 
-  setOpaque(number){
+  setOpaque(id){
     document.getElementById(id).style.opacity = "1";
     document.getElementById(id).style.cursor = "pointer";
   }

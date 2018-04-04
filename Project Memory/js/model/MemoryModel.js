@@ -78,14 +78,8 @@ class MemoryModel extends Observable {
         this.cardArray[kaartID].setUnclickable();
         this.guess1Id = kaartID;
       }
-<<<<<<< HEAD
-        this.notify();
-=======
       this.notify();
->>>>>>> d62b966a85e5bbc0a92ad1eef4b05df3433fef3f
-    }
-  }
-
+    } 
 
 
     eindTimeout(){
@@ -106,5 +100,4 @@ class MemoryModel extends Observable {
       this.timeoutLock = false;
       this.notify();
     }
-
 }
