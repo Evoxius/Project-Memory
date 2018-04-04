@@ -10,6 +10,7 @@ class MemoryModel extends Observable {
       this.randomIndex;
       this.guess1Id;
       this.guess2Id;
+      this.timeoutLock = false;
       this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
       this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
       this.aantalAfbeeldingen = 0;
@@ -65,8 +66,9 @@ class MemoryModel extends Observable {
     flipKaart(kaartID){
       if(Number.isInteger(this.guess1Id))
       {
-        if(this.cardArray[kaartID].getClickable()){
+        if(this.cardArray[kaartID].getClickable() && this.timeoutLock == false){
           this.guess2Id = kaartID;
+          this.timeoutLock = true;
           this.cardArray[kaartID].omdraaien();
           window.setTimeout(this.eindTimeout.bind(this),2000);
         }
@@ -94,6 +96,7 @@ class MemoryModel extends Observable {
         this.cardArray[this.guess1Id].setClickable()
         this.guess1Id = "";
       }
+      this.timeoutLock = false;
       this.notify();
     }
 }
