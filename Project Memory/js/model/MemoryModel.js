@@ -83,9 +83,13 @@ class MemoryModel extends Observable {
         this.guess1Id = kaartID;
       }
       this.notify();
+<<<<<<< HEAD
     }
 
 
+=======
+    } 
+>>>>>>> 135182a7b562b3a7a03d9f6e4a6e608f385acc5d
 
 
     eindTimeout(){
@@ -106,5 +110,4 @@ class MemoryModel extends Observable {
       this.timeoutLock = false;
       this.notify();
     }
-
 }
