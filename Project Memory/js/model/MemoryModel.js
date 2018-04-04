@@ -62,12 +62,10 @@ class MemoryModel extends Observable {
     }
 
     flipKaart(kaartID){
-<<<<<<< HEAD
       this.cardArray[kaartID].omdraaien();
       var audio = new Audio('flip.mp3');
       audio.play();
       this.notify();
-=======
       if(Number.isInteger(this.guess1Id))
       {
         if(this.cardArray[kaartID].getClickable()){
@@ -93,6 +91,5 @@ class MemoryModel extends Observable {
         this.guess1Id = kaartID;
         }
     this.notify();
->>>>>>> b89f33c0f0b2768491bb4b285f8ebbff32e92bd7
     }
 }
