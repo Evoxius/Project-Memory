@@ -42,6 +42,19 @@ class Card extends Observable{
     this.notify();
   }
 
+  getClickable(){
+    return this.isClickable;
+  }
+
+  setClickable(){
+    this.isClickable = true;
+  }
+
+  setUnclickable(){
+    this.isClickable = false;
+  }
+
+
   getSrc(){
     if (!this.isClosed){
     return this.afbeeldingsrc;

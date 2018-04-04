@@ -8,6 +8,7 @@ class MemoryModel extends Observable {
       this.currentIndex;
       this.temporaryValue;
       this.randomIndex;
+      this.guess1Id;
       this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
       this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
       this.aantalAfbeeldingen = 0;
@@ -60,14 +61,31 @@ class MemoryModel extends Observable {
       return array;
     }
 
-    maakKaart(){
-
-    }
-
     flipKaart(kaartID){
-      this.cardArray[kaartID].omdraaien();
-      this.notify();
+      if(Number.isInteger(this.guess1Id))
+      {
+        if(this.cardArray[kaartID].getClickable()){
+          if(this.contentArray[kaartID] == this.contentArray[this.guess1Id])
+          {
+            console.log("SCORE");
+            this.guess1Id = "";
+            this.cardArray[kaartID].omdraaien();
+            this.cardArray[kaartID].setUnclickable();
+          }
+          else
+          {
+            console.log("Nope");
+            this.cardArray[this.guess1Id].omdraaien();
+            this.cardArray[this.guess1Id].setClickable()
+            this.guess1Id = "";
+          }
+        }
+      }
+      else if(this.cardArray[kaartID].getClickable()){
+        this.cardArray[kaartID].omdraaien();
+        this.cardArray[kaartID].setUnclickable();
+        this.guess1Id = kaartID;
+        }
+    this.notify();
     }
-
-
 }
