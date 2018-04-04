@@ -97,10 +97,10 @@ class MemoryModel extends Observable {
         this.cardArray[kaartID].setUnclickable();
         this.guess1Id = kaartID;
       }
-    this.notify();
-        }
-      this.notify();
+        this.notify();
     }
+  }
+
 
     eindTimeout(){
       if(this.contentArray[this.guess2Id] == this.contentArray[this.guess1Id])
@@ -120,4 +120,5 @@ class MemoryModel extends Observable {
       this.timeoutLock = false;
       this.notify();
     }
+
 }
