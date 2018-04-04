@@ -84,7 +84,6 @@ class MemoryModel extends Observable {
       }
       this.notify();
     }
- 
 
     eindTimeout(){
       if(this.contentArray[this.guess2Id] == this.contentArray[this.guess1Id])
@@ -103,5 +102,15 @@ class MemoryModel extends Observable {
       }
       this.timeoutLock = false;
       this.notify();
+    }
+
+    beeindigSpel(){
+      this.contentArray = [];
+      this.cardArray = [];
+      this.guess1Id = "";
+      this.timeoutLock = false;
+      this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
+      this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
+      this.aantalAfbeeldingen = 0;
     }
 }

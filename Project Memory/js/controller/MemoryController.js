@@ -3,7 +3,7 @@ class MemoryController {
         this.model = new MemoryModel();
         this.view = new MemoryView(this.model);
         document.getElementById('spelStart').addEventListener("click", (e) => {this.reageerOpStartSpel();});
-        document.getElementById("backToStart").addEventListener("click", (e)=> {this.view.showStart();});
+        document.getElementById("backToStart").addEventListener("click", (e)=> {this.reageerOpBack();});
         document.getElementById("multiplayer").addEventListener("click", (e)=> {this.view.showName();});
         document.getElementById("timed").addEventListener("click", (e)=> {this.view.hideName();});
         document.getElementById("speler1").addEventListener("click", (e)=> {this.view.showModal1();});
@@ -51,6 +51,10 @@ class MemoryController {
 
     }
 
+    reageerOpBack(){
+      this.view.showStart();
+      this.model.beeindigSpel();
+    }
 
 
 }
