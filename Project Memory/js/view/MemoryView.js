@@ -16,7 +16,7 @@ class MemoryView  extends Observer{
       for (var i = 0; i < this.model.cardArray.length; i++) {
         document.getElementById('cards'+(i+1)).style.backgroundImage = this.model.cardArray[i].getSrc()
         if(this.model.cardArray[i].getTransparent()){
-          this.setTransparent(i);
+          this.setTransparent("cards"+(i+1));
         }
         else{
           this.setOpaque(i)
@@ -27,7 +27,7 @@ class MemoryView  extends Observer{
       for (var i = 0; i < this.model.cardArray.length; i++) {
         document.getElementById('card'+(i+1)).style.backgroundImage = this.model.cardArray[i].getSrc()
         if(this.model.cardArray[i].getTransparent()){
-          this.setTransparent(i);
+          this.setTransparent("card"+(i+1));
         }
       }
     }
@@ -188,18 +188,14 @@ class MemoryView  extends Observer{
 
   // Door deze code kan iets transparent worden.
 
-  setTransparent(number){
-    document.getElementById('card'+(number+1)).style.opacity = "0.0";
-    document.getElementById('cards'+(number+1)).style.opacity = "0.0";
-    document.getElementById('card'+(number+1)).style.cursor = "default";
-    document.getElementById('cards'+(number+1)).style.cursor = "default";
+  setTransparent(id){
+    document.getElementById(id).style.opacity = "0.0";
+    document.getElementById(id).style.cursor = "default";
   }
 
   setOpaque(number){
-    document.getElementById('card'+(number+1)).style.opacity = "1";
-    document.getElementById('cards'+(number+1)).style.opacity = "1";
-    document.getElementById('card'+(number+1)).style.cursor = "pointer";
-    document.getElementById('cards'+(number+1)).style.cursor = "pointer";
+    document.getElementById(id).style.opacity = "1";
+    document.getElementById(id).style.cursor = "pointer";
   }
 
   // Door deze code kunnen de spelers zien wie aan de beurt is en meer.
