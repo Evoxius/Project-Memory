@@ -66,7 +66,6 @@ class MemoryModel extends Observable {
     flipKaart(kaartID){
       if(Number.isInteger(this.guess1Id))
       {
-<<<<<<< HEAD
         if(this.cardArray[kaartID].getClickable()){
           if(this.contentArray[kaartID] == this.contentArray[this.guess1Id])
           {
@@ -86,23 +85,19 @@ class MemoryModel extends Observable {
             var audio = new Audio('wrong.mp3');
             audio.play();
           }
-=======
         if(this.cardArray[kaartID].getClickable() && this.timeoutLock == false){
           this.guess2Id = kaartID;
           this.timeoutLock = true;
           this.cardArray[kaartID].omdraaien();
           window.setTimeout(this.eindTimeout.bind(this),2000);
->>>>>>> 4e9e1a8038e2c108fff1ec43f69fa1202baae292
         }
       }
       else if(this.cardArray[kaartID].getClickable()){
         this.cardArray[kaartID].omdraaien();
         this.cardArray[kaartID].setUnclickable();
         this.guess1Id = kaartID;
-<<<<<<< HEAD
       }
     this.notify();
-=======
         }
       this.notify();
     }
@@ -124,6 +119,5 @@ class MemoryModel extends Observable {
       }
       this.timeoutLock = false;
       this.notify();
->>>>>>> 4e9e1a8038e2c108fff1ec43f69fa1202baae292
     }
 }
