@@ -66,6 +66,8 @@ class MemoryModel extends Observable {
 
     flipKaart(kaartID){
       this.cardArray[kaartID].omdraaien();
+      var audio = new Audio('flip.mp3');
+      audio.play();
       this.notify();
     }
 

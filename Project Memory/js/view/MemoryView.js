@@ -63,6 +63,8 @@ class MemoryView  extends Observer{
   // Door deze code kan de speler het spel starten.
 
   showStart() {
+     var audio = new Audio('click.mp3');
+     audio.play();
      document.getElementById('container').style.display = "none";
      document.getElementById('container2').style.display = "block";
   }
