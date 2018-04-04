@@ -9,6 +9,8 @@ class MemoryModel extends Observable {
       this.temporaryValue;
       this.randomIndex;
       this.guess1Id;
+      this.guess2Id;
+      this.timeoutLock = false;
       this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
       this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
       this.aantalAfbeeldingen = 0;
@@ -64,6 +66,7 @@ class MemoryModel extends Observable {
     flipKaart(kaartID){
       if(Number.isInteger(this.guess1Id))
       {
+<<<<<<< HEAD
         if(this.cardArray[kaartID].getClickable()){
           if(this.contentArray[kaartID] == this.contentArray[this.guess1Id])
           {
@@ -83,13 +86,44 @@ class MemoryModel extends Observable {
             var audio = new Audio('wrong.mp3');
             audio.play();
           }
+=======
+        if(this.cardArray[kaartID].getClickable() && this.timeoutLock == false){
+          this.guess2Id = kaartID;
+          this.timeoutLock = true;
+          this.cardArray[kaartID].omdraaien();
+          window.setTimeout(this.eindTimeout.bind(this),2000);
+>>>>>>> 4e9e1a8038e2c108fff1ec43f69fa1202baae292
         }
       }
       else if(this.cardArray[kaartID].getClickable()){
         this.cardArray[kaartID].omdraaien();
         this.cardArray[kaartID].setUnclickable();
         this.guess1Id = kaartID;
+<<<<<<< HEAD
       }
     this.notify();
+=======
+        }
+      this.notify();
+    }
+
+    eindTimeout(){
+      if(this.contentArray[this.guess2Id] == this.contentArray[this.guess1Id])
+      {
+        console.log("SCORE");
+        this.guess1Id = "";
+        this.cardArray[this.guess2Id].setUnclickable();
+      }
+      else
+      {
+        console.log("Nope");
+        this.cardArray[this.guess1Id].omdraaien();
+        this.cardArray[this.guess2Id].omdraaien();
+        this.cardArray[this.guess1Id].setClickable()
+        this.guess1Id = "";
+      }
+      this.timeoutLock = false;
+      this.notify();
+>>>>>>> 4e9e1a8038e2c108fff1ec43f69fa1202baae292
     }
 }
