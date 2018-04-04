@@ -71,6 +71,8 @@ class MemoryModel extends Observable {
             this.guess1Id = "";
             this.cardArray[kaartID].omdraaien();
             this.cardArray[kaartID].setUnclickable();
+            var audio = new Audio('right.mp3');
+            audio.play();
           }
           else
           {
@@ -78,6 +80,8 @@ class MemoryModel extends Observable {
             this.cardArray[this.guess1Id].omdraaien();
             this.cardArray[this.guess1Id].setClickable()
             this.guess1Id = "";
+            var audio = new Audio('wrong.mp3');
+            audio.play();
           }
         }
       }
@@ -85,7 +89,7 @@ class MemoryModel extends Observable {
         this.cardArray[kaartID].omdraaien();
         this.cardArray[kaartID].setUnclickable();
         this.guess1Id = kaartID;
-        }
+      }
     this.notify();
     }
 }
