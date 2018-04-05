@@ -96,8 +96,10 @@ class MemoryModel extends Observable {
       if(this.contentArray[this.guess2Id] == this.contentArray[this.guess1Id])
       {
         console.log("SCORE");
-        this.guess1Id = "";
         this.cardArray[this.guess2Id].setUnclickable();
+        this.cardArray[this.guess2Id].setTransparent();
+        this.cardArray[this.guess1Id].setTransparent();
+        this.guess1Id = "";
       }
       else
       {
