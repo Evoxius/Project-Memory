@@ -36,22 +36,18 @@ class MemoryModel extends Observable {
       {
         this.contentArray = [7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18, 19, 19, 20, 20, 21, 21, 22, 22, 23, 23, 24, 24]
         this.contentArray = this.shuffle(this.contentArray);
-        console.log(this.contentArray);
         this.cardArray = []
         for (var i = 0; i < this.contentArray.length; i++) {
           this.cardArray.push(new Card(this.contentArray[i]));
         }
-        console.log(this.cardArray)
         }
       else{
         this.contentArray = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
         this.contentArray = this.shuffle(this.contentArray);
-        console.log(this.contentArray);
         this.cardArray = []
         for (var i = 0; i < this.contentArray.length; i++) {
           this.cardArray.push(new Card(this.contentArray[i]));
         }
-        console.log(this.cardArray)
         }
         this.notify();
       }
@@ -61,7 +57,7 @@ class MemoryModel extends Observable {
 
       while(this.currentIndex !== 0){
         this.randomIndex = Math.floor(Math.random() * this.currentIndex);
-        this.currentIndex -= 1;
+        this.currentIndex--;
         this.temporaryValue = array[this.currentIndex];
         array[this.currentIndex] = array[this.randomIndex];
         array[this.randomIndex] = this.temporaryValue;
