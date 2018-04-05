@@ -121,7 +121,7 @@ class MemoryModel extends Observable {
       let tens = 0;
       let appendTens = document.getElementById("tens")
       let appendSeconds = document.getElementById("seconds")
-      let Interval ;
+      let Interval;
 
         tens++;
         if(tens < 9){
