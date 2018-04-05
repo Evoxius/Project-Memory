@@ -3,12 +3,9 @@ class MemoryController {
         this.model = new MemoryModel();
         this.view = new MemoryView(this.model);
         document.getElementById('spelStart').addEventListener("click", (e) => {this.reageerOpStartSpel();});
-<<<<<<< HEAD
         document.getElementById("backToStart").addEventListener("click", (e)=> {this.view.showStart();});
         document.getElementById("backToStart2").addEventListener("click", (e)=> {this.view.showStart();});
-=======
         document.getElementById("backToStart").addEventListener("click", (e)=> {this.reageerOpBack();});
->>>>>>> 12e3aa03b2545e67ef0a3c5445c86d9bcb40642b
         document.getElementById("multiplayer").addEventListener("click", (e)=> {this.view.showName();});
         document.getElementById("timed").addEventListener("click", (e)=> {this.view.hideName();});
         document.getElementById("speler1").addEventListener("click", (e)=> {this.view.showModal1();});

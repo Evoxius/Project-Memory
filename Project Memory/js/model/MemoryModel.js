@@ -89,10 +89,7 @@ class MemoryModel extends Observable {
       }
       this.notify();
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 12e3aa03b2545e67ef0a3c5445c86d9bcb40642b
 
     eindTimeout(){
       if(this.contentArray[this.guess2Id] == this.contentArray[this.guess1Id])
@@ -113,7 +110,6 @@ class MemoryModel extends Observable {
       this.notify();
     }
 
-<<<<<<< HEAD
     timedWatch(){
       this.klokid;
       let seconds = 0;
@@ -144,7 +140,6 @@ class MemoryModel extends Observable {
       }
 
 
-=======
     beeindigSpel(){
       this.contentArray = [];
       this.cardArray = [];
@@ -154,5 +149,5 @@ class MemoryModel extends Observable {
       this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
       this.aantalAfbeeldingen = 0;
     }
->>>>>>> 12e3aa03b2545e67ef0a3c5445c86d9bcb40642b
+
 }
