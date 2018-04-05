@@ -36,7 +36,7 @@ body {
 }
 
 
-#intro, #game, #veld {
+#intro, #game, #veld, #veld2 {
 	width: 80%;
 	text-align: center;
 	margin: 10px auto 0 auto;
@@ -82,7 +82,7 @@ body {
 	background: #ffffff;
 	background-repeat: repeat-x, repeat;
 	min-height: 175px;
-	float:right;
+	float:left;
 	cursor:pointer;
 	border-radius: 5px;
 	transition: 0.3s;
@@ -91,6 +91,8 @@ body {
 
 
 #speler1:hover {opacity: 0.7;}
+
+#speler3:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
@@ -204,6 +206,25 @@ body {
 
 }
 
+#chat3 {
+	min-height: 75px;
+	float: left;
+	padding-top: 23px;
+	color: #b20a23;
+	margin-top: 80px;
+	margin-bottom: 0px;
+  margin-left: 20px;
+	margin-right: 40px;
+	opacity: 0.7;
+	background-color: #57aa52;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+	width: 25%;
+
+
+}
+
 
 #result1 {
 	min-height: 75px;
@@ -234,6 +255,21 @@ body {
 
 }
 
+#result3 {
+	min-height: 75px;
+	float: left;
+  margin-top: 80px;
+	margin-left: 60px;
+	margin-right: 40px;
+	opacity: 0.7;
+	background-color: #5752aa;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+	width: 15%
+
+}
+
 #speler2 {
 	width: 10%;
 	text-align: center;
@@ -251,6 +287,7 @@ body {
 	cursor:pointer;
 	border-radius: 5px;
 	transition: 0.3s;
+	display: none;
 
 }
 
@@ -344,7 +381,7 @@ body {
 
 }
 
-#veld {
+#veld, #veld2 {
 	min-height: 250px;
 }
 
@@ -398,12 +435,81 @@ body {
 	opacity: 0.6;
 }
 
+.cards {
+	width: 7%;
+	text-align: center;
+  margin-left: 10px;
+  margin-top: 60px;
+	margin-right: 50px;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+	color: white;
+	background: ##ffffff;
+	background-image: url("../img/disneylogo.png");
+	background-repeat: repeat-x, repeat;
+	height: 105px;
+	float:right;
+	cursor: pointer;
+}
+
+.cards:hover {
+	background: #5b5c6c;
+	background-image: url("../img/disneylogo.png");
+	background-repeat: repeat-x, repeat;
+  opacity: 0.6;
+}
+
+.cards2 {
+	width: 7%;
+	text-align: center;
+  margin-left: 10px;
+  margin-top: 60px;
+	margin-right: 50px;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 2px 2px 1px black;
+	color: white;
+	background: ##ffffff;
+	background-image: url("../img/roundabout.jpg");
+	background-repeat: repeat-x, repeat;
+	height: 105px;
+	float:right;
+	cursor: pointer;
+}
+
+.cards2:hover {
+	background: #5b5c6c;
+	background-image: url("../img/roundabout.jpg");
+	background-repeat: repeat-x, repeat;
+	opacity: 0.6;
+}
+
 #backAndTime p {
     margin-top: 50px;
 }
 
 #backAndTime button {
     margin-top: 70px;
+		margin-left: 710px;
+}
+
+#backAndTime2 p {
+    margin-top: 50px;
+}
+
+#backAndTime2 button {
+    margin-top: 50px;
+}
+
+#backToStart {
+  	margin-top: 50px;
+}
+
+#backToStart2 {
+	margin-right: 100px;
+	margin-top: 50px;
+	float:right;
 }
 
 
@@ -463,10 +569,13 @@ body {
 	display: none;
 }
 
+#container3{
+	display: none;
+}
+
 #container2{
 	display: block;
 }
-
 
 @keyframes textDrop {
 	0% {

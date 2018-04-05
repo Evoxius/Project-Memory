@@ -39,8 +39,6 @@ class MemoryView  extends Observer{
   // Door deze code kan de speler groep 4 kiezen en met 14 kaarten spelen.
 
   showDivGroep4(){
-    document.getElementById('container').style.display = "block";
-    document.getElementById('container2').style.display = "none";
     for (let i = 1; i < 37; i++) {
       document.getElementById('cards' + i).style.display = "none";
     }
@@ -57,7 +55,6 @@ class MemoryView  extends Observer{
   // Door deze code kan de speler groep 8 kiezen en met 36 kaarten spelen.
 
   showDivGroep8() {
-     document.getElementById('container').style.display = "block";
      document.getElementById('container2').style.display = "none";
      for (let i = 1; i < 37; i++) {
        document.getElementById('cards' + i).style.display = "block";
@@ -72,12 +69,41 @@ class MemoryView  extends Observer{
      }
   }
 
+  showMulti(){
+    document.getElementById('container3').style.display = "none";
+    document.getElementById('container2').style.display = "none";
+    document.getElementById('container').style.display = "block";
+    document.getElementById('speler2').style.display = "block";
+    document.getElementById('speler1').style.display = "block";
+    document.getElementById('veld').style.display = "block";
+    document.getElementById('backAndTime2').style.display = "none";
+    document.getElementById('backToStart2').style.display = "none"
+    document.getElementById('backAndTime').style.display = "block";
+    document.getElementById('backToStart').style.display = "block"
+
+  }
+
+  showTimed(){
+    document.getElementById('container3').style.display = "block";
+    document.getElementById('container').style.display = "block";
+    document.getElementById('intro').style.display = "block";
+    document.getElementById('game').style.display = "block";
+    document.getElementById('veld2').style.display = "block";
+    document.getElementById('veld').style.display = "none";
+    document.getElementById('backAndTime2').style.display = "block";
+    document.getElementById('backToStart2').style.display = "block";
+    document.getElementById('backAndTime').style.display = "none";
+    document.getElementById('backToStart').style.display = "none";
+    document.getElementById('container2').style.display = "none";
+  }
+
   // Door deze code kan de speler het spel starten.
 
   showStart() {
      var audio = new Audio('click.mp3');
      audio.play();
      document.getElementById('container').style.display = "none";
+     document.getElementById('container3').style.display = "none";
      document.getElementById('container2').style.display = "block";
   }
 

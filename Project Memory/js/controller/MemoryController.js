@@ -4,6 +4,7 @@ class MemoryController {
         this.view = new MemoryView(this.model);
         document.getElementById('spelStart').addEventListener("click", (e) => {this.reageerOpStartSpel();});
         document.getElementById("backToStart").addEventListener("click", (e)=> {this.view.showStart();});
+        document.getElementById("backToStart2").addEventListener("click", (e)=> {this.view.showStart();});
         document.getElementById("multiplayer").addEventListener("click", (e)=> {this.view.showName();});
         document.getElementById("timed").addEventListener("click", (e)=> {this.view.hideName();});
         document.getElementById("speler1").addEventListener("click", (e)=> {this.view.showModal1();});
@@ -38,8 +39,19 @@ class MemoryController {
       else {
         this.view.showDivGroep4();
       }
+
+      if (document.getElementById('option2').checked) {
+        this.view.showTimed();
+      }
+      else {
+        this.view.showMulti();
+      }
+
       this.model.maakSpeelveld();
+      this.model.timedWatch();
       this.view.showMessage(this.model.player1Naam + " is aan de beurt.");
+      this.view.showMessage(this.model.player2Naam + " is aan de beurt.");
+      this.view.showMessage(this.model.player3Naam + " is aan de beurt.");
       console.log(e.srcElement.id);
       var audio = new Audio('start.mp3');
       audio.play();
