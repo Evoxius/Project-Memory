@@ -4,8 +4,8 @@ class MemoryModel extends Observable {
       this.player1Naam;
       this.player2Naam;
       this.player3Naam;
-      this.contentArray;
-      this.cardArray;
+      this.contentArray = [];
+      this.cardArray = [];
       this.currentIndex;
       this.temporaryValue;
       this.randomIndex;
@@ -16,6 +16,7 @@ class MemoryModel extends Observable {
       this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
       this.player3 = new Player(document.getElementById("usr1").value, "b", "c");
       this.aantalAfbeeldingen = 0;
+      this.gameDone = false;
     }
 
      // Hierdoor wordt de naam gezet.
@@ -107,6 +108,12 @@ class MemoryModel extends Observable {
         this.guess1Id = "";
       }
       this.timeoutLock = false;
+      this.gameDone = true;
+      for (var i = 0; i < this.cardArray.length; i++) {
+        if(this.cardArray[i].getClickable()){
+          this.gameDone = false;
+        }
+      }
       this.notify();
     }
 
@@ -148,6 +155,7 @@ class MemoryModel extends Observable {
       this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
       this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
       this.aantalAfbeeldingen = 0;
+      this.gamedone = false;
     }
 
 }
