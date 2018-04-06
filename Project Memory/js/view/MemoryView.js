@@ -16,7 +16,7 @@ addObserver(m){
     super.update();
     document.getElementById('chat1').innerHTML = this.model.player1Naam;
     document.getElementById('chat2').innerHTML = this.model.player2Naam;
-    this.model.Stopwatch.h2.textContent = (this.model.Stopwatch.hours ? (this.model.Stopwatch.hours > 9 ? this.model.Stopwatch.hours : "0" + this.model.Stopwatch.hours) : "00") + ":" + (this.model.Stopwatch.minutes ? (this.model.Stopwatch.minutes > 9 ? this.model.Stopwatch.minutes : "0" + this.model.Stopwatch.minutes) : "00") + ":" + (this.model.Stopwatch.seconds > 9 ? this.model.Stopwatch.seconds : "0" + this.model.Stopwatch.seconds);
+    if(this.model.Stopwatch){this.model.Stopwatch.h2.textContent = (this.model.Stopwatch.hours ? (this.model.Stopwatch.hours > 9 ? this.model.Stopwatch.hours : "0" + this.model.Stopwatch.hours) : "00") + ":" + (this.model.Stopwatch.minutes ? (this.model.Stopwatch.minutes > 9 ? this.model.Stopwatch.minutes : "0" + this.model.Stopwatch.minutes) : "00") + ":" + (this.model.Stopwatch.seconds > 9 ? this.model.Stopwatch.seconds : "0" + this.model.Stopwatch.seconds);}
     if(document.getElementById('groep8').checked){
       for (var i = 0; i < this.model.cardArray.length; i++) {
         document.getElementById('cards'+(i+1)).style.backgroundImage = this.model.cardArray[i].getSrc()
@@ -60,7 +60,7 @@ addObserver(m){
   // Door deze code kan de speler groep 8 kiezen en met 36 kaarten spelen.
 
   showDivGroep8() {
-     document.getElementById('container2').style.display = "none";
+     document.getElementById('startPagina').style.display = "none";
      for (let i = 1; i < 37; i++) {
        document.getElementById('cards' + i).style.display = "block";
      }
@@ -75,9 +75,9 @@ addObserver(m){
   }
 
   showMulti(){
-    document.getElementById('container3').style.display = "none";
-    document.getElementById('container2').style.display = "none";
-    document.getElementById('container').style.display = "block";
+    document.getElementById('singlePlayer').style.display = "none";
+    document.getElementById('startPagina').style.display = "none";
+    document.getElementById('cardContainer').style.display = "block";
     document.getElementById('speler2').style.display = "block";
     document.getElementById('speler1').style.display = "block";
     document.getElementById('veld').style.display = "block";
@@ -89,8 +89,8 @@ addObserver(m){
   }
 
   showTimed(){
-    document.getElementById('container3').style.display = "block";
-    document.getElementById('container').style.display = "block";
+    document.getElementById('singlePlayer').style.display = "block";
+    document.getElementById('cardContainer').style.display = "block";
     document.getElementById('intro').style.display = "block";
     document.getElementById('game').style.display = "block";
     document.getElementById('veld2').style.display = "block";
@@ -99,7 +99,7 @@ addObserver(m){
     document.getElementById('backToStart2').style.display = "block";
     document.getElementById('backAndTime').style.display = "none";
     document.getElementById('backToStart').style.display = "none";
-    document.getElementById('container2').style.display = "none";
+    document.getElementById('startPagina').style.display = "none";
   }
 
   // Door deze code kan de speler het spel starten.
@@ -107,9 +107,9 @@ addObserver(m){
   showStart() {
      var audio = new Audio('click.mp3');
      audio.play();
-     document.getElementById('container').style.display = "none";
-     document.getElementById('container3').style.display = "none";
-     document.getElementById('container2').style.display = "block";
+     document.getElementById('cardContainer').style.display = "none";
+     document.getElementById('singlePlayer').style.display = "none";
+     document.getElementById('startPagina').style.display = "block";
   }
 
   // Door deze code kan de speler (als de speler multiplayer kiest) twee naamvelden zien.

@@ -565,15 +565,15 @@ body {
 	filter: blur(0px);
 }
 
-#container{
+#cardContainer{
 	display: none;
 }
 
-#container3{
+#singlePlayer{
 	display: none;
 }
 
-#container2{
+#startPagina{
 	display: block;
 }
 
