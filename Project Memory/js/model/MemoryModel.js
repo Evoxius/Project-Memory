@@ -11,6 +11,7 @@ class MemoryModel extends Observable {
       this.randomIndex;
       this.guess1Id;
       this.guess2Id;
+      this.gameDone = false;
       this.timeoutLock = false;
       this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
       this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
@@ -100,8 +101,10 @@ class MemoryModel extends Observable {
       if(this.contentArray[this.guess2Id] == this.contentArray[this.guess1Id])
       {
         console.log("SCORE");
-        this.guess1Id = "";
         this.cardArray[this.guess2Id].setUnclickable();
+        this.cardArray[this.guess1Id].setTransparent();
+        this.cardArray[this.guess2Id].setTransparent();
+        this.guess1Id = "";
       }
       else
       {
@@ -110,6 +113,12 @@ class MemoryModel extends Observable {
         this.cardArray[this.guess2Id].omdraaien();
         this.cardArray[this.guess1Id].setClickable()
         this.guess1Id = "";
+      }
+      this.gameDone = true;
+      for (var i = 0; i < this.cardArray.length; i++) {
+        if(this.cardArray[i].getClickable()){
+          this.gameDone = false;
+        }
       }
       this.timeoutLock = false;
       this.notify();
@@ -124,6 +133,7 @@ class MemoryModel extends Observable {
       this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
       this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
       this.aantalAfbeeldingen = 0;
+      this.gameDone = false;
     }
 
 }

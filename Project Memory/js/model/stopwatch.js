@@ -2,7 +2,7 @@ class Stopwatch extends Observable{
 
   constructor(){
     super();
-    this.seconds = 0;
+    this.seconds = -1;
     this.minutes = 0;
     this.hours = 0;
     this.h2 = document.getElementsByTagName('h2')[0];

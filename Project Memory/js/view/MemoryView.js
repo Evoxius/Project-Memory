@@ -24,7 +24,7 @@ addObserver(m){
           this.setTransparent("cards"+(i+1));
         }
         else{
-          this.setOpaque("cards"+(i+1))
+          this.setOpaque("cards"+(i+1));
         }
       }
     }
