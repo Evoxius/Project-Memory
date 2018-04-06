@@ -1,5 +1,5 @@
-class Player extends Observable{
-  constructor(a,b,c){
+class Player extends Observable {
+  constructor(a, b, c) {
     super();
     this.naam = a;
     this.win = b;
@@ -7,12 +7,12 @@ class Player extends Observable{
 
   }
 
-  changeVars(){
+  changeVars() {
 
     this.notify();
 
   }
 
-  
+
 
 }
