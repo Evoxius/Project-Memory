@@ -34,8 +34,6 @@ class Card extends Observable{
       case 23:this.afbeeldingsrc = "url(img/Groep8/train.jpg)";break;
       case 24:this.afbeeldingsrc = "url(img/Groep8/trash.jpg)";break;
     }
-    this.notify();
-
   }
 
   setTransparent(){
@@ -48,7 +46,6 @@ class Card extends Observable{
 
   omdraaien(){
     this.isClosed = !this.isClosed;
-    this.notify();
   }
 
   getClickable(){

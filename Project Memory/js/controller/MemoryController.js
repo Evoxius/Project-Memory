@@ -43,13 +43,14 @@ class MemoryController {
 
       if (document.getElementById('option2').checked) {
         this.view.showTimed();
+        this.model.callStopwatch();
+        this.view.addObserver(this.model.Stopwatch);
       }
       else {
         this.view.showMulti();
       }
 
       this.model.maakSpeelveld();
-      this.model.timedWatch();
       this.view.showMessage(this.model.player1Naam + " is aan de beurt.");
       this.view.showMessage(this.model.player2Naam + " is aan de beurt.");
       this.view.showMessage(this.model.player3Naam + " is aan de beurt.");

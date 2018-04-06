@@ -15,7 +15,12 @@ class MemoryModel extends Observable {
       this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
       this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
       this.player3 = new Player(document.getElementById("usr1").value, "b", "c");
+
       this.aantalAfbeeldingen = 0;
+    }
+
+    callStopwatch(){
+      this.Stopwatch = new Stopwatch();
     }
 
      // Hierdoor wordt de naam gezet.
@@ -109,35 +114,6 @@ class MemoryModel extends Observable {
       this.timeoutLock = false;
       this.notify();
     }
-
-    timedWatch(){
-      this.klokid;
-      let seconds = 0;
-      let tens = 0;
-      let appendTens = document.getElementById("tens")
-      let appendSeconds = document.getElementById("seconds")
-      let Interval ;
-
-        tens++;
-        if(tens < 9){
-          appendTens.innerHTML = "0" + tens;
-        }
-        if (tens > 9){
-          appendTens.innerHTML = tens;
-        }
-        if (tens > 99) {
-          console.log("seconds");
-          seconds++;
-          appendSeconds.innerHTML = "0" + seconds;
-          tens = 0;
-          appendTens.innerHTML = "0" + 0;
-        }
-        if (seconds > 9){
-          appendSeconds.innerHTML = seconds;
-          this.klokid=window.setTimeout(this.timedWatch.bind(this), 1000);
-        }
-        this.notify();
-      }
 
 
     beeindigSpel(){

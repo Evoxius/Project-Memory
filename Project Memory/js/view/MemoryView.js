@@ -6,12 +6,17 @@ class MemoryView  extends Observer{
     this.model.addObserver(this);
   }
 
+addObserver(m){
+  m.addObserver(this);
+}
+
   // Door deze code worden de namen van speler 1 en speler 2 in real-time geplaatst op de goede plek.
 
   update(){
     super.update();
     document.getElementById('chat1').innerHTML = this.model.player1Naam;
     document.getElementById('chat2').innerHTML = this.model.player2Naam;
+    this.model.Stopwatch.h2.textContent = (this.model.Stopwatch.hours ? (this.model.Stopwatch.hours > 9 ? this.model.Stopwatch.hours : "0" + this.model.Stopwatch.hours) : "00") + ":" + (this.model.Stopwatch.minutes ? (this.model.Stopwatch.minutes > 9 ? this.model.Stopwatch.minutes : "0" + this.model.Stopwatch.minutes) : "00") + ":" + (this.model.Stopwatch.seconds > 9 ? this.model.Stopwatch.seconds : "0" + this.model.Stopwatch.seconds);
     if(document.getElementById('groep8').checked){
       for (var i = 0; i < this.model.cardArray.length; i++) {
         document.getElementById('cards'+(i+1)).style.backgroundImage = this.model.cardArray[i].getSrc()
