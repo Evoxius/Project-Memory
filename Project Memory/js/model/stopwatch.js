@@ -7,6 +7,7 @@ class Stopwatch extends Observable{
     this.hours = 0;
     this.h2 = document.getElementsByTagName('h2')[0];
     this.add();
+    this.object;
     }
 
     add() {
@@ -29,6 +30,21 @@ class Stopwatch extends Observable{
 
       clear(){
         clearTimeout(this.time);
+      }
+
+      sendToStorage(naam){
+        for (var i = 0; localStorage.getItem("Memory-TimedSpeler"+i)!==null; i++) {
+      }
+      var total = (this.hours*3600)+(this.minutes*60)+(this.seconds);
+      this.object = JSON.stringify({
+        naam : naam,
+        seconds : this.seconds,
+        minutes : this.minutes,
+        hours : this.hours,
+        total : total
+      });
+      localStorage.setItem("Memory-TimedSpeler"+i, this.object);
+      console.log(localStorage.getItem("Memory-TimedSpeler"+i));
       }
 
   }
