@@ -52,8 +52,6 @@ class MemoryController {
 
       this.model.maakSpeelveld();
       this.view.showMessage(this.model.player1Naam + " is aan de beurt.");
-      this.view.showMessage(this.model.player2Naam + " is aan de beurt.");
-      this.view.showMessage(this.model.player3Naam + " is aan de beurt.");
       console.log(e.srcElement.id);
       var audio = new Audio('start.mp3');
       audio.play();
