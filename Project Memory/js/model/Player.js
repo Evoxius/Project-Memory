@@ -1,9 +1,10 @@
 class Player extends Observable{
-  constructor(a,b,c){
+  constructor(a,b){
     super();
     this.naam = a;
-    this.win = b;
-    this.lose = c;
+    this.id = b;
+    this.score = 0;
+    this.id
 
   }
 
@@ -13,6 +14,10 @@ class Player extends Observable{
 
   }
 
-  
+  getScore(){
+    return this.score;
+  }
+
+
 
 }

@@ -13,10 +13,6 @@ class MemoryModel extends Observable {
       this.guess2Id;
       this.gameDone = false;
       this.timeoutLock = false;
-      this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
-      this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
-      this.player3 = new Player(document.getElementById("usr1").value, "b", "c");
-
       this.aantalAfbeeldingen = 0;
     }
 
@@ -27,11 +23,30 @@ class MemoryModel extends Observable {
      // Hierdoor wordt de naam gezet.
 
     setNames(){
+      if(document.getElementById("usr1").value!==""){
+      for (var i = 0; localStorage.getItem("MemorySpeler"+i)!==null; i++) {
+      };
+      localStorage.setItem("MemorySpeler"+i, document.getElementById("usr1").value);
+      }
+
+      if(document.getElementById("usr2").value!==""){
+      for (var i = 0; localStorage.getItem("MemorySpeler"+i)!==null; i++) {
+      };
+      localStorage.setItem("MemorySpeler"+i, document.getElementById("usr2").value);
+      }
+
+      this.player1 = new Player(document.getElementById("usr1").value, i);
+      this.player2 = new Player(document.getElementById("usr2").value, "b");
+      this.player3 = new Player(document.getElementById("usr1").value, "b");
       this.player1Naam = document.getElementById("usr1").value;
       this.player2Naam = document.getElementById("usr2").value;
       this.player3Naam = document.getElementById("usr1").value;
+    }
 
-
+    showPlayerlist(){
+      for (var i = 0; localStorage.getItem("MemorySpeler"+i)!==null; i++) {
+        console.log(localStorage.getItem("MemorySpeler"+i));
+      };
     }
 
     // Door deze code wordt de speelveld van eerst groep 8 aangemaakt als groep8 aangeklikt is. Anders wordt de speelveld van groep 4 aangemaakt met 14 kaarten.
@@ -124,14 +139,13 @@ class MemoryModel extends Observable {
       this.notify();
     }
 
-
     beeindigSpel(){
       this.contentArray = [];
       this.cardArray = [];
       this.guess1Id = "";
       this.timeoutLock = false;
-      this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
-      this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
+      this.player1 = new Player(document.getElementById("usr1").value, "b");
+      this.player2 = new Player(document.getElementById("usr2").value, "b");
       this.aantalAfbeeldingen = 0;
       this.gameDone = false;
     }
