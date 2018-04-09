@@ -129,6 +129,9 @@ class MemoryModel extends Observable {
           this.gameDone = false;
         }
       }
+      if (this.gameDone && document.getElementById("option2").checked) {
+        this.Stopwatch.clear();
+      }
       this.timeoutLock = false;
       this.notify();
     }

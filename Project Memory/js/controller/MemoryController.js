@@ -7,7 +7,7 @@ class MemoryController {
         document.getElementById("backToStart2").addEventListener("click", (e)=> {this.view.showStart();});
         document.getElementById("backToStart").addEventListener("click", (e)=> {this.reageerOpBack();});
         document.getElementById("multiplayer").addEventListener("click", (e)=> {this.view.showName();});
-        document.getElementById("timed").addEventListener("click", (e)=> {this.view.hideName();});
+        document.getElementById("timedButton").addEventListener("click", (e)=> {this.view.hideName();});
         document.getElementById("speler1").addEventListener("click", (e)=> {this.view.showModal1();});
         document.getElementById("speler2").addEventListener("click", (e)=> {this.view.showModal2();});
         document.getElementById('profile1').addEventListener('click', (e)=> {this.view.changeImage(0);});

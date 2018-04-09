@@ -16,6 +16,7 @@ addObserver(m){
     super.update();
     document.getElementById('chat1').innerHTML = this.model.player1Naam;
     document.getElementById('chat2').innerHTML = this.model.player2Naam;
+    document.getElementById('chat3').innerHTML = this.model.player1Naam;
     document.getElementById('result1').getElementsByTagName("p")[0].innerHTML = this.model.player1.getPunten();
     document.getElementById('result2').getElementsByTagName("p")[0].innerHTML = this.model.player2.getPunten();
     this.showMessage(this.model.playerTurn + " is aan de beurt.");

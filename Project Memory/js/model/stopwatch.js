@@ -24,7 +24,11 @@ class Stopwatch extends Observable{
     }
 
      timer() {
-        setTimeout(this.add.bind(this), 1000);
+        this.time = setTimeout(this.add.bind(this), 1000);
+      }
+
+      clear(){
+        clearTimeout(this.time);
       }
 
   }
