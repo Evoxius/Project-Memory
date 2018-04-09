@@ -19,6 +19,15 @@ addObserver(m){
     document.getElementById('result1').getElementsByTagName("p")[0].innerHTML = this.model.player1.getPunten();
     document.getElementById('result2').getElementsByTagName("p")[0].innerHTML = this.model.player2.getPunten();
     this.showMessage(this.model.playerTurn + " is aan de beurt.");
+    if (this.model.gameDone) {
+      if (this.model.player1.getPunten() > this.model.player2.getPunten()) {
+        this.showMessage(this.model.player1Naam + " heeft gewonnen.")
+      } else if (this.model.player1.getPunten() < this.model.player2.getPunten()) {
+        this.showMessage(this.model.player2Naam + " heeft gewonnen.")
+      } else {
+        this.showMessage("Het is gelijkspel.")
+      }
+    }
     if(this.model.Stopwatch){this.model.Stopwatch.h2.textContent = (this.model.Stopwatch.hours ? (this.model.Stopwatch.hours > 9 ? this.model.Stopwatch.hours : "0" + this.model.Stopwatch.hours) : "00") + ":" + (this.model.Stopwatch.minutes ? (this.model.Stopwatch.minutes > 9 ? this.model.Stopwatch.minutes : "0" + this.model.Stopwatch.minutes) : "00") + ":" + (this.model.Stopwatch.seconds > 9 ? this.model.Stopwatch.seconds : "0" + this.model.Stopwatch.seconds);}
     if(document.getElementById('groep8').checked){
       for (var i = 0; i < this.model.cardArray.length; i++) {
