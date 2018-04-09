@@ -115,12 +115,16 @@ addObserver(m){
   // Door deze code kan de speler (als de speler multiplayer kiest) twee naamvelden zien.
 
    showName() {
+     document.getElementById('form-group1').style.display = "block";
      document.getElementById('form-group2').style.display = "block";
+     document.getElementById('form-group3').style.display = "none";
   }
 
   // Door deze code kan de speler (als de speler Timed Mode kiest) maar een naamveld zien.
    hideName() {
+     document.getElementById('form-group1').style.display = "none";
      document.getElementById('form-group2').style.display = "none";
+     document.getElementById('form-group3').style.display = "block";
   }
 
   // Door deze code wordt de scherm van speler1 gemaakt waar speler1 zijn/haar profielfoto kan veranderen.

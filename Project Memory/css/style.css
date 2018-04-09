@@ -326,7 +326,16 @@ body {
     margin-top: 20px;
 }
 
+#form-group3 {
+    margin-top: 20px;
+}
+
 #usr2 {
+	width: 50%;
+	margin:auto;
+}
+
+#usr3 {
 	width: 50%;
 	margin:auto;
 }
