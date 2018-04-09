@@ -10,6 +10,7 @@ class MemoryController {
         document.getElementById("timed").addEventListener("click", (e)=> {this.view.hideName();});
         document.getElementById("speler1").addEventListener("click", (e)=> {this.view.showModal1();});
         document.getElementById("speler2").addEventListener("click", (e)=> {this.view.showModal2();});
+        document.getElementById("singleplayer").addEventListener("click", (e)=> {this.view.showModal3();});
         document.getElementById('profile1').addEventListener('click', (e)=> {this.view.changeImage(0);});
         document.getElementById('profile2').addEventListener('click', (e)=> {this.view.changeImage(1);});
         document.getElementById('profile3').addEventListener('click', (e)=> {this.view.changeImage(2);});
@@ -18,6 +19,10 @@ class MemoryController {
         document.getElementById('profile6').addEventListener('click', (e)=> {this.view.changeImage2(1);});
         document.getElementById('profile7').addEventListener('click', (e)=> {this.view.changeImage2(2);});
         document.getElementById('profile8').addEventListener('click', (e)=> {this.view.changeImage2(3);});
+        document.getElementById('profile9').addEventListener('click', (e)=> {this.view.changeImage3(0);});
+        document.getElementById('profile10').addEventListener('click', (e)=> {this.view.changeImage3(1);});
+        document.getElementById('profile11').addEventListener('click', (e)=> {this.view.changeImage3(2);});
+        document.getElementById('profile12').addEventListener('click', (e)=> {this.view.changeImage3(3);});
 
         for (var i = 0; i < 14; i++) {
           document.getElementById('card'+(1+i)).addEventListener('click', (e)=> {this.reageerOpKlikKaart();});

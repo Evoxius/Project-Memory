@@ -24,7 +24,7 @@ addObserver(m){
           this.setTransparent("cards"+(i+1));
         }
         else{
-          this.setOpaque("cards"+(i+1));
+          this.setOpaque("cards"+(i+1))
         }
       }
     }
@@ -189,6 +189,41 @@ addObserver(m){
       }
   }
 
+  showModal3(){
+          // Get the modal
+      let modal = document.getElementById('myModal');
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      let img = document.getElementById('singleplayer');
+      let modalImg = document.getElementById("singleplayer");
+      let captionText = document.getElementById("caption");
+      document.getElementById('profile1').style.display = "none"
+      document.getElementById('profile2').style.display = "none"
+      document.getElementById('profile3').style.display = "none"
+      document.getElementById('profile4').style.display = "none"
+      document.getElementById('profile5').style.display = "none"
+      document.getElementById('profile6').style.display = "none"
+      document.getElementById('profile7').style.display = "none"
+      document.getElementById('profile8').style.display = "none"
+      document.getElementById('profile9').style.display = "block"
+      document.getElementById('profile10').style.display = "block"
+      document.getElementById('profile11').style.display = "block"
+      document.getElementById('profile12').style.display = "block"
+      img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = document.getElementById("caption").innerHTML;
+      }
+
+      // Get the <span> element that closes the modal
+      let span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+  }
+
   // Door deze code kan speler1 klikken op verschillende afbeeldingen en de profielfoto wordt veranderdt
 
   changeImage(change){
@@ -209,6 +244,19 @@ addObserver(m){
 
   changeImage2(change){
         let pic = document.getElementById('speler2');
+        let modal = document.getElementById('myModal');
+
+        switch (change){
+        case 0: pic.src = "img/profiel1.jpg"; break;
+        case 1: pic.src = "img/profiel2.jpg"; break;
+        case 2: pic.src = "img/profiel3.png"; break;
+        case 3: pic.src = "img/profiel4.jpg"; break;
+      }
+        modal.style.display = "none";
+  }
+
+  changeImage3(change){
+        let pic = document.getElementById('singleplayer');
         let modal = document.getElementById('myModal');
 
         switch (change){
