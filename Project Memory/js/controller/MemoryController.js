@@ -33,6 +33,7 @@ class MemoryController {
     reageerOpStartSpel(e){
       e = window.event;
       this.model.setNames();
+      this.model.maakSpeelveld();
 
       if (document.getElementById('groep8').checked) {
         this.view.showDivGroep8();
@@ -44,13 +45,14 @@ class MemoryController {
       if (document.getElementById('option2').checked) {
         this.view.showTimed();
         this.model.callStopwatch();
+        this.model.formHighscores();
+        this.view.showHighscore();
         this.view.addObserver(this.model.Stopwatch);
       }
       else {
         this.view.showMulti();
       }
 
-      this.model.maakSpeelveld();
       this.view.showMessage(this.model.player1Naam + " is aan de beurt.");
       console.log(e.srcElement.id);
       var audio = new Audio('start.mp3');

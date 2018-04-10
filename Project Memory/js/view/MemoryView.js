@@ -19,6 +19,9 @@ addObserver(m){
     document.getElementById('chat3').innerHTML = this.model.player1Naam;
     document.getElementById('result1').getElementsByTagName("p")[0].innerHTML = this.model.player1.getPunten();
     document.getElementById('result2').getElementsByTagName("p")[0].innerHTML = this.model.player2.getPunten();
+    if (this.model.gameDone) {
+      this.showHighscore();
+    }
     this.showMessage(this.model.playerTurn + " is aan de beurt.");
     if (this.model.gameDone) {
       if (this.model.player1.getPunten() > this.model.player2.getPunten()) {
@@ -113,6 +116,17 @@ addObserver(m){
     document.getElementById('backAndTime').style.display = "none";
     document.getElementById('backToStart').style.display = "none";
     document.getElementById('startPagina').style.display = "none";
+  }
+
+  showHighscore(){
+    for (var i = 0; i < 5; i++) {
+      if (this.model.highscoreArray[i]) {
+        document.getElementById("highscore").getElementsByTagName("p")[i].innerHTML ="Naam: " + this.model.highscoreArray[i].naam +
+        " tijd: "+ this.model.highscoreArray[i].hours + " : "
+        + this.model.highscoreArray[i].minutes + " : "
+        + this.model.highscoreArray[i].seconds;
+      }
+    }
   }
 
   // Door deze code kan de speler het spel starten.

@@ -17,6 +17,7 @@ class MemoryModel extends Observable {
       this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
       this.player3 = new Player(document.getElementById("usr1").value, "b", "c");
       this.playerTurn;
+      this.highscoreArray = [];
 
       this.aantalAfbeeldingen = 0;
     }
@@ -98,6 +99,23 @@ class MemoryModel extends Observable {
       this.notify();
     }
 
+    formHighscores(){
+      for (var i = 0; localStorage.getItem("Memory-TimedSpeler" + i) != null; i++) {
+        let speler = JSON.parse(localStorage.getItem("Memory-TimedSpeler" + i));
+        this.highscoreArray[i] = speler;
+      }
+      this.highscoreArray.sort(this.compareNumbers);
+      this.notify();
+    }
+
+    compareNumbers(a, b) {
+      if (a.total < b.total){
+        return -1;}
+      if (a.total > b.total){
+        return 1;}
+      return 0;
+}
+
 
     eindTimeout(){
       if(this.contentArray[this.guess2Id] == this.contentArray[this.guess1Id])
@@ -148,7 +166,9 @@ class MemoryModel extends Observable {
 
 
     beeindigSpel(){
-      this.Stopwatch.clear();
+      if (this.Stopwatch) {
+          this.Stopwatch.clear();
+      }
       this.contentArray = [];
       this.cardArray = [];
       this.guess1Id = "";
