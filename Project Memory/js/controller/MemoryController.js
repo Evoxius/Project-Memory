@@ -4,7 +4,7 @@ class MemoryController {
         this.view = new MemoryView(this.model);
         document.getElementById('spelStart').addEventListener("click", (e) => {this.reageerOpStartSpel();});
         document.getElementById("backToStart").addEventListener("click", (e)=> {this.view.showStart();});
-        document.getElementById("backToStart2").addEventListener("click", (e)=> {this.view.showStart();});
+        document.getElementById("backToStart2").addEventListener("click", (e)=> {this.reageerOpBack();});
         document.getElementById("backToStart").addEventListener("click", (e)=> {this.reageerOpBack();});
         document.getElementById("multiplayer").addEventListener("click", (e)=> {this.view.showName();});
         document.getElementById("timedButton").addEventListener("click", (e)=> {this.view.hideName();});

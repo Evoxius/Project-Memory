@@ -148,6 +148,7 @@ class MemoryModel extends Observable {
 
 
     beeindigSpel(){
+      this.Stopwatch.clear();
       this.contentArray = [];
       this.cardArray = [];
       this.guess1Id = "";
