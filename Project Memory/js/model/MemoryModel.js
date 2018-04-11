@@ -161,6 +161,7 @@ class MemoryModel extends Observable {
       if (this.gameDone && document.getElementById("option2").checked) {
         this.Stopwatch.clear();
         this.Stopwatch.sendToStorage(this.player1Naam);
+        this.formHighscores();
       }
       this.timeoutLock = false;
       this.notify();
