@@ -17,8 +17,8 @@ addObserver(m){
     document.getElementById('chat1').innerHTML = this.model.player1Naam;
     document.getElementById('chat2').innerHTML = this.model.player2Naam;
     document.getElementById('chat3').innerHTML = this.model.player1Naam;
-    document.getElementById('result1').getElementsByTagName("p")[0].innerHTML = this.model.player1.getPunten();
-    document.getElementById('result2').getElementsByTagName("p")[0].innerHTML = this.model.player2.getPunten();
+    document.getElementById('result1').getElementsByTagName("p")[0].innerHTML ="Score: " + this.model.player1.getPunten();
+    document.getElementById('result2').getElementsByTagName("p")[0].innerHTML ="Score: " + this.model.player2.getPunten();
     if (this.model.gameDone) {
       console.log("sla highscore op");
       this.showHighscore();
@@ -129,7 +129,7 @@ addObserver(m){
           + this.model.highscoreArrayGroep4[i].seconds;
         }
         else {
-          document.getElementById("highscore").getElementsByTagName("p")[i].innerHTML =+i+1 + "."
+          document.getElementById("highscore").getElementsByTagName("p")[i].innerHTML =+i+1 + '. "Niemand"'
         }
       }
     }
@@ -142,7 +142,7 @@ addObserver(m){
           + this.model.highscoreArrayGroep8[i].seconds;
         }
         else {
-          document.getElementById("highscore").getElementsByTagName("p")[i].innerHTML =+i+1 + "."
+          document.getElementById("highscore").getElementsByTagName("p")[i].innerHTML =+i+1 + '. "Niemand"'
         }
       }
     }
@@ -151,8 +151,6 @@ addObserver(m){
   // Door deze code kan de speler het spel starten.
 
   showStart() {
-     var audio = new Audio('click.mp3');
-     audio.play();
      document.getElementById('cardContainer').style.display = "none";
      document.getElementById('singlePlayer').style.display = "none";
      document.getElementById('startPagina').style.display = "block";
@@ -161,15 +159,11 @@ addObserver(m){
   // Door deze code kan de speler (als de speler multiplayer kiest) twee naamvelden zien.
 
    showName() {
-     var audio = new Audio('audio/click.mp3');
-     audio.play();
      document.getElementById('form-group2').style.display = "block";
   }
 
   // Door deze code kan de speler (als de speler Timed Mode kiest) maar een naamveld zien.
    hideName() {
-     var audio = new Audio('audio/click.mp3');
-     audio.play();
      document.getElementById('form-group2').style.display = "none";
   }
 
@@ -291,8 +285,10 @@ addObserver(m){
   // Door deze code kan speler1 klikken op verschillende afbeeldingen en de profielfoto wordt veranderdt
 
   changeImage(change){
+        var audio = new Audio('audio/click.mp3');
+        audio.play();
         let pic = document.getElementById('speler1');
-        let modal = document.getElementById('myModal');
+        let modal = document.getElementById('fotoVeld');
 
         switch (change){
         case 0: pic.src = "img/profiel1.jpg"; break;
@@ -307,8 +303,10 @@ addObserver(m){
 
 
   changeImage2(change){
+        var audio = new Audio('audio/click.mp3');
+        audio.play();
         let pic = document.getElementById('speler2');
-        let modal = document.getElementById('myModal');
+        let modal = document.getElementById('fotoVeld');
 
         switch (change){
         case 0: pic.src = "img/profiel1.jpg"; break;
@@ -323,8 +321,10 @@ addObserver(m){
 
 
   changeImage3(change){
+        var audio = new Audio('audio/click.mp3');
+        audio.play();
         let pic = document.getElementById('speler3');
-        let modal = document.getElementById('myModal');
+        let modal = document.getElementById('fotoVeld');
 
         switch (change){
         case 0: pic.src = "img/profiel1.jpg"; break;

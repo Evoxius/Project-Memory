@@ -17,6 +17,7 @@ class MemoryModel extends Observable {
       this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
       this.player3 = new Player(document.getElementById("usr1").value, "b", "c");
       this.playerTurn;
+      this.timeout;
       this.highscoreArrayGroep4 = [];
       this.highscoreArrayGroep8 = [];
 
@@ -82,11 +83,13 @@ class MemoryModel extends Observable {
       if(Number.isInteger(this.guess1Id))
       {
         if(this.cardArray[kaartID].getClickable() && this.timeoutLock == false){
+          debugger;
           this.guess2Id = kaartID;
           var audio = new Audio('audio/flip.mp3');
           audio.play();
           this.timeoutLock = true;
           this.cardArray[kaartID].omdraaien();
+          window.clearTimeout(this.timeout);
           window.setTimeout(this.eindTimeout.bind(this),2000);
         }
       }
@@ -96,7 +99,16 @@ class MemoryModel extends Observable {
         audio.play();
         this.cardArray[kaartID].setUnclickable();
         this.guess1Id = kaartID;
+        this.timeout = window.setTimeout(this.timeOut.bind(this),5000)
       }
+      this.notify();
+    }
+
+    timeOut(){
+      this.changeTurn();
+      this.cardArray[this.guess1Id].omdraaien();
+      this.cardArray[this.guess1Id].setClickable();
+      this.guess1Id = "";
       this.notify();
     }
 
@@ -141,6 +153,7 @@ class MemoryModel extends Observable {
           this.player2.verhoogPunten();
         }
         this.guess1Id = "";
+        this.guess2Id = "";
       }
       else
       {
@@ -149,6 +162,7 @@ class MemoryModel extends Observable {
         this.cardArray[this.guess2Id].omdraaien();
         this.cardArray[this.guess1Id].setClickable()
         this.guess1Id = "";
+        this.guess2Id = "";
         this.changeTurn();
       }
       this.gameDone = true;

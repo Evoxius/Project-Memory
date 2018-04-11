@@ -42,11 +42,29 @@ class Stopwatch extends Observable{
         for (var i = 0; localStorage.getItem("Memory-TimedSpeler"+groep+i)!==null; i++) {
       }
       var total = (this.hours*3600)+(this.minutes*60)+(this.seconds);
+      if (this.seconds < 10) {
+        var seconds = "0" + this.seconds;
+      }
+      else {
+        var seconds = this.seconds
+      }
+      if (this.minutes < 10) {
+        var minutes = "0" + this.minutes;
+      }
+      else {
+        var minutes = this.minutes;
+      }
+      if (this.hours < 10) {
+        var hours = "0" + this.hours;
+      }
+      else {
+        var hours = this.hours;
+      }
       this.object = JSON.stringify({
         naam : naam,
-        seconds : this.seconds,
-        minutes : this.minutes,
-        hours : this.hours,
+        seconds : seconds,
+        minutes : minutes,
+        hours : hours,
         total : total
       });
       localStorage.setItem("Memory-TimedSpeler"+groep+i, this.object);

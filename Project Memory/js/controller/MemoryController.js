@@ -23,6 +23,10 @@ class MemoryController {
         document.getElementById('profile10').addEventListener('click', (e)=> {this.view.changeImage3(1);});
         document.getElementById('profile11').addEventListener('click', (e)=> {this.view.changeImage3(2);});
         document.getElementById('profile12').addEventListener('click', (e)=> {this.view.changeImage3(3);});
+        document.getElementsByClassName('btn btn-primary')[0].addEventListener('click', (e)=> {this.reageerOpGroepClick();});
+        document.getElementsByClassName('btn btn-primary')[1].addEventListener('click', (e)=> {this.reageerOpGroepClick();});
+        document.getElementsByClassName('btn btn-primary')[2].addEventListener('click', (e)=> {this.reageerOpGroepClick();});
+        document.getElementsByClassName('btn btn-primary')[3].addEventListener('click', (e)=> {this.reageerOpGroepClick();});
 
         for (var i = 0; i < 14; i++) {
           document.getElementById('card'+(1+i)).addEventListener('click', (e)=> {this.reageerOpKlikKaart();});
@@ -41,13 +45,9 @@ class MemoryController {
       this.model.maakSpeelveld();
 
       if (document.getElementById('groep8').checked) {
-        var audio = new Audio('audio/click.mp3');
-        audio.play();
         this.view.showDivGroep8();
       }
       else {
-        var audio = new Audio('audio/click.mp3');
-        audio.play();
         this.view.showDivGroep4();
       }
 
@@ -66,6 +66,11 @@ class MemoryController {
       console.log(e.srcElement.id);
       var audio = new Audio('audio/start.mp3');
       audio.play();
+      }
+
+      reageerOpGroepClick(){
+        var audio = new Audio('audio/click.mp3');
+        audio.play();
       }
 
     // Door deze code wordt er gereageerd op het klikken op een kaart.
