@@ -6,9 +6,11 @@ class MemoryView  extends Observer{
     this.model.addObserver(this);
   }
 
-addObserver(m){
-  m.addObserver(this);
-}
+    // Deze code maakt een observer aan waardoor de View gelijk een update krijgt.
+
+    addObserver(m){
+      m.addObserver(this);
+    }
 
   // Door deze code worden de namen van speler 1 en speler 2 in real-time geplaatst op de goede plek.
 
@@ -129,7 +131,7 @@ addObserver(m){
     for (var i = 0; i < 5; i++) {
       if (this.model.highscoreArray[i]) {
         debugger;
-        document.getElementById("highscore").getElementsByTagName("p")[i].innerHTML ="Naam: " + this.model.highscoreArray[i].naam +
+        document.getElementById("highscore").getElementsByTagName("p")[i].innerHTML ="Naam: " + this.model.highscoreArray[i].naam + " | " +
         " tijd: "+ this.model.highscoreArray[i].hours + " : "
         + this.model.highscoreArray[i].minutes + " : "
         + this.model.highscoreArray[i].seconds;

@@ -159,6 +159,8 @@ class MemoryModel extends Observable {
         }
       }
       if (this.gameDone && document.getElementById("option2").checked) {
+        var audio = new Audio('winsound.mp3');
+        audio.play();
         this.Stopwatch.clear();
         this.Stopwatch.sendToStorage(this.player1Naam);
         this.formHighscores();
