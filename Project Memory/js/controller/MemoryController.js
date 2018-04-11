@@ -41,9 +41,13 @@ class MemoryController {
       this.model.maakSpeelveld();
 
       if (document.getElementById('groep8').checked) {
+        var audio = new Audio('audio/click.mp3');
+        audio.play();
         this.view.showDivGroep8();
       }
       else {
+        var audio = new Audio('audio/click.mp3');
+        audio.play();
         this.view.showDivGroep4();
       }
 
