@@ -123,7 +123,7 @@ addObserver(m){
     if (document.getElementById("groep4").checked) {
       for (var i = 0; i < 5; i++) {
         if (this.model.highscoreArrayGroep4[i]) {
-          document.getElementById("highscore").getElementsByTagName("p")[i].innerHTML =+i+1 + ". "+"Naam: " + this.model.highscoreArrayGroep4[i].naam +
+          document.getElementById("highscore").getElementsByTagName("p")[i].innerHTML =+i+1 + ". "+"Naam: " + this.model.highscoreArrayGroep4[i].naam +   " | "+
           " tijd: "+ this.model.highscoreArrayGroep4[i].hours + " : "
           + this.model.highscoreArrayGroep4[i].minutes + " : "
           + this.model.highscoreArrayGroep4[i].seconds;
