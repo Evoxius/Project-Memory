@@ -88,7 +88,7 @@ class MemoryModel extends Observable {
       {
         if(this.cardArray[kaartID].getClickable() && this.timeoutLock == false){
           this.guess2Id = kaartID;
-          var audio = new Audio('flip.mp3');
+          var audio = new Audio('audio/flip.mp3');
           audio.play();
           this.timeoutLock = true;
           this.cardArray[kaartID].omdraaien();
@@ -97,7 +97,7 @@ class MemoryModel extends Observable {
       }
       else if(this.cardArray[kaartID].getClickable()){
         this.cardArray[kaartID].omdraaien();
-        var audio = new Audio('flip.mp3');
+        var audio = new Audio('audio/flip.mp3');
         audio.play();
         this.cardArray[kaartID].setUnclickable();
         this.guess1Id = kaartID;
@@ -158,8 +158,12 @@ class MemoryModel extends Observable {
           this.gameDone = false;
         }
       }
+      if (this.gameDone && document.getElementById("option1").checked) {
+        var audio = new Audio('audio/winsound.mp3');
+        audio.play();
+      }
       if (this.gameDone && document.getElementById("option2").checked) {
-        var audio = new Audio('winsound.mp3');
+        var audio = new Audio('audio/winsound.mp3');
         audio.play();
         this.Stopwatch.clear();
         this.Stopwatch.sendToStorage(this.player1Naam);
