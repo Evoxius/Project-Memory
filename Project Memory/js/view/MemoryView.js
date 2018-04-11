@@ -90,6 +90,8 @@ addObserver(m){
      }
   }
 
+  // Door deze code wordt alles dat niet multiplayer is onzichtbaar.
+
   showMulti(){
     document.getElementById('singlePlayer').style.display = "none";
     document.getElementById('startPagina').style.display = "none";
@@ -104,12 +106,14 @@ addObserver(m){
 
   }
 
+  // Door deze code wordt alles dat niet timed mode is onzichtbaar.
+
   showTimed(){
     document.getElementById('singlePlayer').style.display = "block";
     document.getElementById('cardContainer').style.display = "block";
     document.getElementById('intro').style.display = "block";
     document.getElementById('game').style.display = "block";
-    document.getElementById('veld2').style.display = "block";
+    document.getElementById('singlePlayerVeld').style.display = "block";
     document.getElementById('veld').style.display = "none";
     document.getElementById('backAndTime2').style.display = "block";
     document.getElementById('backToStart2').style.display = "block";
@@ -117,6 +121,8 @@ addObserver(m){
     document.getElementById('backToStart').style.display = "none";
     document.getElementById('startPagina').style.display = "none";
   }
+
+  // Door deze code komt de highscore op het scherm.
 
   showHighscore(){
     for (var i = 0; i < 5; i++) {
@@ -154,7 +160,7 @@ addObserver(m){
 
   showModal1(){
           // Get the modal
-      let modal = document.getElementById('myModal');
+      let modal = document.getElementById('fotoVeld');
 
       // Get the image and insert it inside the modal - use its "alt" text as a caption
       let img = document.getElementById('speler1');
@@ -191,7 +197,7 @@ addObserver(m){
 
   showModal2(){
           // Get the modal
-      let modal = document.getElementById('myModal');
+      let modal = document.getElementById('fotoVeld');
 
       // Get the image and insert it inside the modal - use its "alt" text as a caption
       let img = document.getElementById('speler2');
@@ -224,9 +230,11 @@ addObserver(m){
       }
   }
 
+    // Door deze code wordt de scherm van speler3 gemaakt waar speler3 zijn/haar profielfoto kan veranderen.
+
   showModal3(){
           // Get the modal
-      let modal = document.getElementById('myModal');
+      let modal = document.getElementById('fotoVeld');
 
       // Get the image and insert it inside the modal - use its "alt" text as a caption
       let img = document.getElementById('speler3');
@@ -263,7 +271,7 @@ addObserver(m){
 
   changeImage(change){
         let pic = document.getElementById('speler1');
-        let modal = document.getElementById('myModal');
+        let modal = document.getElementById('fotoVeld');
 
         switch (change){
         case 0: pic.src = "img/profiel1.jpg"; break;
@@ -279,7 +287,7 @@ addObserver(m){
 
   changeImage2(change){
         let pic = document.getElementById('speler2');
-        let modal = document.getElementById('myModal');
+        let modal = document.getElementById('fotoVeld');
 
         switch (change){
         case 0: pic.src = "img/profiel1.jpg"; break;
@@ -295,7 +303,7 @@ addObserver(m){
 
   changeImage3(change){
         let pic = document.getElementById('speler3');
-        let modal = document.getElementById('myModal');
+        let modal = document.getElementById('fotoVeld');
 
         switch (change){
         case 0: pic.src = "img/profiel1.jpg"; break;
@@ -312,6 +320,8 @@ addObserver(m){
     document.getElementById(id).style.opacity = "0.0";
     document.getElementById(id).style.cursor = "default";
   }
+
+    // Door deze code wordt iets ondoorzichtbaar.
 
   setOpaque(id){
     document.getElementById(id).style.opacity = "1";

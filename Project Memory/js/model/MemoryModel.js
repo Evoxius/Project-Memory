@@ -22,6 +22,8 @@ class MemoryModel extends Observable {
       this.aantalAfbeeldingen = 0;
     }
 
+     // Hierdoor wordt de stopwatch gemaakt.
+
     callStopwatch(){
       this.Stopwatch = new Stopwatch();
     }
@@ -64,6 +66,8 @@ class MemoryModel extends Observable {
         this.notify();
       }
 
+     // Hierdoor wordt de shuffle array aangemaakt.
+
     shuffle(array){
       this.currentIndex = array.length;
 
@@ -76,6 +80,8 @@ class MemoryModel extends Observable {
       }
       return array;
     }
+
+    // Hierdoor worden de kaarten geflipt.
 
     flipKaart(kaartID){
       if(Number.isInteger(this.guess1Id))
@@ -99,6 +105,8 @@ class MemoryModel extends Observable {
       this.notify();
     }
 
+    // Hier wordt de highscores aangemaakt.
+
     formHighscores(){
       for (var i = 0; localStorage.getItem("Memory-TimedSpeler" + i) != null; i++) {
         let speler = JSON.parse(localStorage.getItem("Memory-TimedSpeler" + i));
@@ -108,6 +116,8 @@ class MemoryModel extends Observable {
       this.notify();
     }
 
+    // Hier worden de 2 nummers van a en b vergelijkt
+
     compareNumbers(a, b) {
       if (a.total < b.total){
         return -1;}
@@ -116,6 +126,7 @@ class MemoryModel extends Observable {
       return 0;
 }
 
+    // Hierdoor worden de punten van de multiplayer verhoogt en als het spel klaar is in timed mode wordt de stopwatch gestopt.
 
     eindTimeout(){
       if(this.contentArray[this.guess2Id] == this.contentArray[this.guess1Id])
@@ -155,6 +166,8 @@ class MemoryModel extends Observable {
       this.notify();
     }
 
+    // Hier worden de beurten van de spelers in multiplayer aangemaakt
+
     changeTurn(){
       if (this.playerTurn == this.player1Naam) {
         this.playerTurn = this.player2Naam;
@@ -163,6 +176,8 @@ class MemoryModel extends Observable {
         this.playerTurn = this.player1Naam;
       }
     }
+
+    // Hierdoor wordt het spel beeindigt als het nodig is.
 
 
     beeindigSpel(){

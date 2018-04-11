@@ -64,11 +64,15 @@ class MemoryController {
       audio.play();
       }
 
+    // Door deze code wordt er gereageerd op het klikken op een kaart.
+
     reageerOpKlikKaart(e){
       e = window.event;
       this.model.flipKaart(Number(e.path[0].id.match(/\d/g).join("")) - 1);
 
     }
+
+    // Door deze code wordt het spel beeindigt als je op de 'Back' knop drukt.
 
     reageerOpBack(){
       this.view.showStart();
