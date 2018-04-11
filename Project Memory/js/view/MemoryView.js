@@ -152,11 +152,15 @@ class MemoryView  extends Observer{
   // Door deze code kan de speler (als de speler multiplayer kiest) twee naamvelden zien.
 
    showName() {
+     var audio = new Audio('audio/click.mp3');
+     audio.play();
      document.getElementById('form-group2').style.display = "block";
   }
 
   // Door deze code kan de speler (als de speler Timed Mode kiest) maar een naamveld zien.
    hideName() {
+     var audio = new Audio('audio/click.mp3');
+     audio.play();
      document.getElementById('form-group2').style.display = "none";
   }
 
@@ -165,6 +169,8 @@ class MemoryView  extends Observer{
   showModal1(){
           // Get the modal
       let modal = document.getElementById('fotoVeld');
+      var audio = new Audio('audio/click.mp3');
+      audio.play();
 
       // Get the image and insert it inside the modal - use its "alt" text as a caption
       let img = document.getElementById('speler1');
@@ -202,6 +208,8 @@ class MemoryView  extends Observer{
   showModal2(){
           // Get the modal
       let modal = document.getElementById('fotoVeld');
+      var audio = new Audio('audio/click.mp3');
+      audio.play();
 
       // Get the image and insert it inside the modal - use its "alt" text as a caption
       let img = document.getElementById('speler2');
@@ -239,6 +247,8 @@ class MemoryView  extends Observer{
   showModal3(){
           // Get the modal
       let modal = document.getElementById('fotoVeld');
+      var audio = new Audio('audio/click.mp3');
+      audio.play();
 
       // Get the image and insert it inside the modal - use its "alt" text as a caption
       let img = document.getElementById('speler3');
