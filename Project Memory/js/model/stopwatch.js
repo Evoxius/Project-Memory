@@ -33,7 +33,13 @@ class Stopwatch extends Observable{
       }
 
       sendToStorage(naam){
-        for (var i = 0; localStorage.getItem("Memory-TimedSpeler"+i)!==null; i++) {
+        if (document.getElementById("groep4").checked) {
+          var groep = "-Groep4"
+        }
+        else {
+          var groep = "-Groep8"
+        }
+        for (var i = 0; localStorage.getItem("Memory-TimedSpeler"+groep+i)!==null; i++) {
       }
       var total = (this.hours*3600)+(this.minutes*60)+(this.seconds);
       this.object = JSON.stringify({
@@ -43,8 +49,8 @@ class Stopwatch extends Observable{
         hours : this.hours,
         total : total
       });
-      localStorage.setItem("Memory-TimedSpeler"+i, this.object);
-      console.log(localStorage.getItem("Memory-TimedSpeler"+i));
+      localStorage.setItem("Memory-TimedSpeler"+groep+i, this.object);
+      console.log(localStorage.getItem("Memory-TimedSpeler"+groep+i));
       }
 
   }

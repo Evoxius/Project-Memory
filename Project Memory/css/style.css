@@ -36,7 +36,7 @@ body {
 }
 
 
-#intro, #game, #veld, #singlePlayerVeld {
+#intro, #game, #veld, #veld2 {
 	width: 80%;
 	text-align: center;
 	margin: 10px auto 0 auto;
@@ -406,7 +406,7 @@ body {
 
 }
 
-#veld, #singlePlayerVeld {
+#veld, #veld2 {
 	min-height: 250px;
 }
 
