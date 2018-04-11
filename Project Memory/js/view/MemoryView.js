@@ -110,7 +110,7 @@ addObserver(m){
     document.getElementById('cardContainer').style.display = "block";
     document.getElementById('intro').style.display = "block";
     document.getElementById('game').style.display = "block";
-    document.getElementById('veld2').style.display = "block";
+    document.getElementById('singlePlayerVeld').style.display = "block";
     document.getElementById('veld').style.display = "none";
     document.getElementById('backAndTime2').style.display = "block";
     document.getElementById('backToStart2').style.display = "block";
