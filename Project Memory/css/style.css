@@ -524,7 +524,7 @@ body {
 }
 
 #backAndTime2 button {
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 #backToStart {
@@ -533,7 +533,7 @@ body {
 
 #backToStart2 {
 	margin-right: 665px;
-	margin-top: 50px;
+	margin-top: 1px;
 	float:right;
 }
 
