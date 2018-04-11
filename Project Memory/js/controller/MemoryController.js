@@ -60,7 +60,7 @@ class MemoryController {
 
       this.view.showMessage(this.model.player1Naam + " is aan de beurt.");
       console.log(e.srcElement.id);
-      var audio = new Audio('start.mp3');
+      var audio = new Audio('audio/start.mp3');
       audio.play();
       }
 
