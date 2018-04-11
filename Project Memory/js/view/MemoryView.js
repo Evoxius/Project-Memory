@@ -20,6 +20,7 @@ addObserver(m){
     document.getElementById('result1').getElementsByTagName("p")[0].innerHTML = this.model.player1.getPunten();
     document.getElementById('result2').getElementsByTagName("p")[0].innerHTML = this.model.player2.getPunten();
     if (this.model.gameDone) {
+      console.log("sla highscore op");
       this.showHighscore();
     }
     this.showMessage(this.model.playerTurn + " is aan de beurt.");
@@ -121,6 +122,7 @@ addObserver(m){
   showHighscore(){
     for (var i = 0; i < 5; i++) {
       if (this.model.highscoreArray[i]) {
+        debugger;
         document.getElementById("highscore").getElementsByTagName("p")[i].innerHTML ="Naam: " + this.model.highscoreArray[i].naam +
         " tijd: "+ this.model.highscoreArray[i].hours + " : "
         + this.model.highscoreArray[i].minutes + " : "
