@@ -12,8 +12,8 @@ class MemoryModel extends Observable {
       this.guess2Id;
       this.gameDone = false;
       this.timeoutLock = false;
-      this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
-      this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
+      this.player1 = new Player(document.getElementById("usr1").value);
+      this.player2 = new Player(document.getElementById("usr2").value);
       this.playerTurn;
       this.timeout;
       this.highscoreArrayGroep4 = [];
@@ -199,8 +199,8 @@ class MemoryModel extends Observable {
       this.cardArray = [];
       this.guess1Id = "";
       this.timeoutLock = false;
-      this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
-      this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
+      this.player1 = new Player(document.getElementById("usr1").value);
+      this.player2 = new Player(document.getElementById("usr2").value);
       this.gameDone = false;
     }
 

@@ -5,7 +5,6 @@ class Stopwatch extends Observable{
     this.seconds = -1;
     this.minutes = 0;
     this.hours = 0;
-    this.h2 = document.getElementsByTagName('h2')[0];
     this.add();
     this.object;
     }
