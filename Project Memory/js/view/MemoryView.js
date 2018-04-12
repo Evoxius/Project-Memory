@@ -142,7 +142,7 @@ class MemoryView  extends Observer{
     if (document.getElementById("groep8").checked) {
       for (var i = 0; i < 5; i++) {
         if (this.model.highscoreArrayGroep8[i]) {
-          document.getElementById("highscore").getElementsByTagName("p")[i].innerHTML =+i+1+". "+"Naam: " + this.model.highscoreArrayGroep8[i].naam +
+          document.getElementById("highscore").getElementsByTagName("p")[i].innerHTML =+i+1+". "+"Naam: " + this.model.highscoreArrayGroep8[i].naam +  " | " +
           " tijd: "+ this.model.highscoreArrayGroep8[i].hours + " : "
           + this.model.highscoreArrayGroep8[i].minutes + " : "
           + this.model.highscoreArrayGroep8[i].seconds;

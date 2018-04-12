@@ -84,7 +84,6 @@ class MemoryModel extends Observable {
       if(Number.isInteger(this.guess1Id))
       {
         if(this.cardArray[kaartID].getClickable() && this.timeoutLock == false){
-          debugger;
           this.guess2Id = kaartID;
           var audio = new Audio('audio/flip.mp3');
           audio.play();
