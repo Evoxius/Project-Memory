@@ -3,7 +3,6 @@ class MemoryModel extends Observable {
       super();
       this.player1Naam;
       this.player2Naam;
-      this.player3Naam;
       this.contentArray;
       this.cardArray;
       this.currentIndex;
@@ -15,7 +14,6 @@ class MemoryModel extends Observable {
       this.timeoutLock = false;
       this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
       this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
-      this.player3 = new Player(document.getElementById("usr1").value, "b", "c");
       this.playerTurn;
       this.timeout;
       this.highscoreArrayGroep4 = [];
@@ -33,7 +31,6 @@ class MemoryModel extends Observable {
     setNames(){
       this.player1Naam = document.getElementById("usr1").value;
       this.player2Naam = document.getElementById("usr2").value;
-      this.player3Naam = document.getElementById("usr1").value;
       this.playerTurn = this.player1Naam;
       console.log(this.playerTurn);
 

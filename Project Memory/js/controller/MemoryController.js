@@ -78,7 +78,6 @@ class MemoryController {
     reageerOpKlikKaart(e){
       e = window.event;
       this.model.flipKaart(Number(e.path[0].id.match(/\d/g).join("")) - 1);
-
     }
 
     // Door deze code wordt het spel beeindigt als je op de 'Back' knop drukt.
