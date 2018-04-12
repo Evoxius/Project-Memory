@@ -6,9 +6,9 @@ class MemoryView  extends Observer{
     this.model.addObserver(this);
   }
 
-addObserver(m){
-  m.addObserver(this);
-}
+  addObserver(m){
+    m.addObserver(this);
+  }
 
   // Door deze code worden de namen van speler 1 en speler 2 in real-time geplaatst op de goede plek.
 
@@ -91,6 +91,8 @@ addObserver(m){
      }
   }
 
+  // Door deze code kan je multiplayer zien
+
   showMulti(){
     document.getElementById('singlePlayer').style.display = "none";
     document.getElementById('startPagina').style.display = "none";
@@ -105,6 +107,8 @@ addObserver(m){
 
   }
 
+  // Door deze code kan je timed mode zien
+
   showTimed(){
     document.getElementById('singlePlayer').style.display = "block";
     document.getElementById('cardContainer').style.display = "block";
@@ -118,6 +122,8 @@ addObserver(m){
     document.getElementById('backToStart').style.display = "none";
     document.getElementById('startPagina').style.display = "none";
   }
+
+  // Door deze code kan je de highscore zien
 
   showHighscore(){
     if (document.getElementById("groep4").checked) {
@@ -245,6 +251,8 @@ addObserver(m){
       }
   }
 
+  // Door deze code wordt de scherm van speler3 gemaakt waar speler3 zijn/haar profielfoto kan veranderen.
+
   showModal3(){
           // Get the modal
       let modal = document.getElementById('fotoVeld');
@@ -341,6 +349,8 @@ addObserver(m){
     document.getElementById(id).style.opacity = "0.0";
     document.getElementById(id).style.cursor = "default";
   }
+
+  // Door deze code kan iets ondoorzichtbaar worden.
 
   setOpaque(id){
     document.getElementById(id).style.opacity = "1";
