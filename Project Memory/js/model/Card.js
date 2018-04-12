@@ -36,6 +36,8 @@ class Card extends Observable{
     }
   }
 
+  // Door deze code kan iets transparent worden.
+
   setTransparent(){
     this.transparent = true;
   }
@@ -60,6 +62,7 @@ class Card extends Observable{
     this.isClickable = false;
   }
 
+  // Door deze code blijven de kaarten disney of de roundabout als achtergrond foto. Tot de kaarten niet meer dicht zijn.
 
   getSrc(){
     if (!this.isClosed){
