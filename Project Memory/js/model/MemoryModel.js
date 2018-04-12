@@ -18,8 +18,6 @@ class MemoryModel extends Observable {
       this.timeout;
       this.highscoreArrayGroep4 = [];
       this.highscoreArrayGroep8 = [];
-
-      this.aantalAfbeeldingen = 0;
     }
 
     callStopwatch(){
@@ -203,7 +201,6 @@ class MemoryModel extends Observable {
       this.timeoutLock = false;
       this.player1 = new Player(document.getElementById("usr1").value, "b", "c");
       this.player2 = new Player(document.getElementById("usr2").value, "b", "c");
-      this.aantalAfbeeldingen = 0;
       this.gameDone = false;
     }
 
