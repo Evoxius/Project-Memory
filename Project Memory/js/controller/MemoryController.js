@@ -68,6 +68,8 @@ class MemoryController {
       audio.play();
       }
 
+      // Door deze code komt er een geluidje als iemand op groep 4 of groep 8 klikt
+
       reageerOpGroepClick(){
         var audio = new Audio('audio/click.mp3');
         audio.play();
@@ -86,6 +88,5 @@ class MemoryController {
       this.view.showStart();
       this.model.beeindigSpel();
     }
-
 
 }

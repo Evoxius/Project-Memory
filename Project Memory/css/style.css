@@ -35,7 +35,6 @@ body {
 	animation: textDrop 2s;
 }
 
-
 #intro, #game, #veld, #singlePlayerVeld {
 	width: 80%;
 	text-align: center;
@@ -66,7 +65,6 @@ body {
 	cursor:pointer;
 	border-radius: 5px;
 	transition: 0.3s;
-
 }
 
 #speler3 {
@@ -86,9 +84,7 @@ body {
 	cursor:pointer;
 	border-radius: 5px;
 	transition: 0.3s;
-
 }
-
 
 #speler1:hover {opacity: 0.7;}
 
@@ -185,7 +181,6 @@ body {
 	border-radius: 20px;
 	box-shadow: 2px 2px 1px black;
 	width: 25%;
-
 }
 
 #chat2 {
@@ -202,8 +197,6 @@ body {
 	border-radius: 20px;
 	box-shadow: 2px 2px 1px black;
 	width: 25%;
-
-
 }
 
 #chat3 {
@@ -254,7 +247,6 @@ body {
 	border-radius: 20px;
 	box-shadow: 2px 2px 1px black;
 	width: 15%
-
 }
 
 #result1 p{
@@ -277,7 +269,6 @@ body {
 	border-radius: 20px;
 	box-shadow: 2px 2px 1px black;
 	width: 15%
-
 }
 
 #result3 {
@@ -292,7 +283,6 @@ body {
 	border-radius: 20px;
 	box-shadow: 2px 2px 1px black;
 	width: 15%
-
 }
 
 #speler2 {
@@ -313,7 +303,6 @@ body {
 	border-radius: 5px;
 	transition: 0.3s;
 	display: none;
-
 }
 
 #speler2:hover {opacity: 0.7;}
@@ -329,7 +318,6 @@ body {
 	background: #aa8f00;
 	background-image: url("../img/zenbg-1.png"), url("../img/zenbg-2.png");
 	background-repeat: repeat-y, repeat;
-
 	min-height: 500px;
   margin-top: 200px;
 }
@@ -363,6 +351,7 @@ body {
 #groep4:hover {
   background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
 }
+
 #groep4:active {
   background-color: #6eb9f7;
   background-size: 100%;
@@ -372,24 +361,24 @@ body {
 #groep8:hover {
   background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
 }
+
 #groep8:active {
   background-color: #6eb9f7;
   background-size: 100%;
   transition: background 0s;
 }
+
 #groep4 {
     margin-top: 40px;
     margin-right: 200px;
 		background-position: center;
 	  transition: background 0.8s;
-
 }
 
 #groep8 {
     margin-top: 40px;
 		background-position: center;
 		transition: background 0.8s;
-
 }
 
 #intro span, #box span {
@@ -403,7 +392,6 @@ body {
 
 #game {
 	min-height: 550px;
-
 }
 
 #veld, #singlePlayerVeld {
@@ -536,7 +524,6 @@ body {
 	margin-top: 1px;
 	float:right;
 }
-
 
 #settings {
 	font-size: 22px;

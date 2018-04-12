@@ -20,6 +20,8 @@ class MemoryModel extends Observable {
       this.highscoreArrayGroep8 = [];
     }
 
+    // Door deze code wordt een nieuwe stopwatch aangemaakt
+
     callStopwatch(){
       this.Stopwatch = new Stopwatch();
     }
@@ -61,6 +63,8 @@ class MemoryModel extends Observable {
         this.notify();
       }
 
+      // Door deze code worden de kaarten geshuffeld
+
     shuffle(array){
       this.currentIndex = array.length;
 
@@ -73,6 +77,8 @@ class MemoryModel extends Observable {
       }
       return array;
     }
+
+    // Door deze code kan de kaart geflipt worden
 
     flipKaart(kaartID){
       if(Number.isInteger(this.guess1Id))
@@ -99,6 +105,8 @@ class MemoryModel extends Observable {
       this.notify();
     }
 
+    // Door deze code is het mogelijk om meerdere beurten te hebben
+
     timeOut(){
       this.changeTurn();
       this.cardArray[this.guess1Id].omdraaien();
@@ -106,6 +114,8 @@ class MemoryModel extends Observable {
       this.guess1Id = "";
       this.notify();
     }
+
+    // Door deze code wordt de highscore aangemaakt
 
     formHighscores(){
       if (document.getElementById("groep4").checked) {
@@ -125,14 +135,17 @@ class MemoryModel extends Observable {
       this.notify();
     }
 
+    // Door deze code wordt de nummers bekeken en als het voldoet aan de twee if-statements, returnt het -1 of 1.
+
     compareNumbers(a, b) {
       if (a.total < b.total){
         return -1;}
       if (a.total > b.total){
         return 1;}
       return 0;
-}
+    }
 
+    // Door deze code wordt de timeout beeindigt
 
     eindTimeout(){
       if(this.contentArray[this.guess2Id] == this.contentArray[this.guess1Id])
@@ -181,6 +194,8 @@ class MemoryModel extends Observable {
       this.notify();
     }
 
+    // Door deze code is het mogelijk om van beurt te veranderen
+
     changeTurn(){
       if (this.playerTurn == this.player1Naam) {
         this.playerTurn = this.player2Naam;
@@ -190,6 +205,7 @@ class MemoryModel extends Observable {
       }
     }
 
+    // Door deze code kan het spel beindigt worden
 
     beeindigSpel(){
       if (this.Stopwatch) {
