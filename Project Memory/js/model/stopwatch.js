@@ -68,7 +68,6 @@ class Stopwatch extends Observable{
         total : total
       });
       localStorage.setItem("Memory-TimedSpeler"+groep+i, this.object);
-      console.log(localStorage.getItem("Memory-TimedSpeler"+groep+i));
       }
 
   }

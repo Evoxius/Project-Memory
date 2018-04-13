@@ -27,12 +27,6 @@ class MemoryController {
         document.getElementById("profile" + 11).addEventListener('click', (e)=> {this.view.changeImage(10);});
         document.getElementById("profile" + 12).addEventListener('click', (e)=> {this.view.changeImage(11);});
 
-        // for (var j = 0; j < 12; j++) {
-        //   debugger;
-        //   document.getElementById("profile" + (j+1)).addEventListener('click', (e)=> {this.view.changeImage(j);});
-        //   console.log(j);
-        // }
-
         for (var i = 0; i < 14; i++) {
           document.getElementById('card'+(1+i)).addEventListener('click', (e)=> {this.reageerOpKlikKaart();});
         }
@@ -68,7 +62,6 @@ class MemoryController {
       }
 
       this.view.showMessage(this.model.player1Naam + " is aan de beurt.");
-      console.log(e.srcElement.id);
       var audio = new Audio('audio/start.mp3');
       audio.play();
       }

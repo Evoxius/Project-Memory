@@ -32,8 +32,6 @@ class MemoryModel extends Observable {
       this.player1Naam = document.getElementById("usr1").value;
       this.player2Naam = document.getElementById("usr2").value;
       this.playerTurn = this.player1Naam;
-      console.log(this.playerTurn);
-
     }
 
     // Door deze code wordt de speelveld van eerst groep 8 aangemaakt als groep8 aangeklikt is. Anders wordt de speelveld van groep 4 aangemaakt met 14 kaarten.
@@ -43,22 +41,18 @@ class MemoryModel extends Observable {
       {
         this.contentArray = [7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18, 19, 19, 20, 20, 21, 21, 22, 22, 23, 23, 24, 24]
         this.contentArray = this.shuffle(this.contentArray);
-        console.log(this.contentArray);
         this.cardArray = []
         for (var i = 0; i < this.contentArray.length; i++) {
           this.cardArray.push(new Card(this.contentArray[i]));
         }
-        console.log(this.cardArray)
         }
       else{
         this.contentArray = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
         this.contentArray = this.shuffle(this.contentArray);
-        console.log(this.contentArray);
         this.cardArray = []
         for (var i = 0; i < this.contentArray.length; i++) {
           this.cardArray.push(new Card(this.contentArray[i]));
         }
-        console.log(this.cardArray)
         }
         this.notify();
       }
@@ -149,7 +143,6 @@ class MemoryModel extends Observable {
     eindTimeout(){
       if(this.contentArray[this.guess2Id] == this.contentArray[this.guess1Id])
       {
-        console.log("SCORE");
         this.cardArray[this.guess2Id].setUnclickable();
         this.cardArray[this.guess1Id].setTransparent();
         this.cardArray[this.guess2Id].setTransparent();
@@ -164,7 +157,6 @@ class MemoryModel extends Observable {
       }
       else
       {
-        console.log("Nope");
         this.cardArray[this.guess1Id].omdraaien();
         this.cardArray[this.guess2Id].omdraaien();
         this.cardArray[this.guess1Id].setClickable()

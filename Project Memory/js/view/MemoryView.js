@@ -20,7 +20,6 @@ class MemoryView  extends Observer{
     document.getElementById('result1').getElementsByTagName("p")[0].innerHTML ="Score: " + this.model.player1.getPunten();
     document.getElementById('result2').getElementsByTagName("p")[0].innerHTML ="Score: " + this.model.player2.getPunten();
     if (this.model.gameDone) {
-      console.log("sla highscore op");
       this.showHighscore();
     }
     this.showMessage(this.model.playerTurn + " is aan de beurt.");
@@ -293,7 +292,6 @@ class MemoryView  extends Observer{
   // Door deze code kan speler1 klikken op verschillende afbeeldingen en de profielfoto wordt veranderdt
 
   changeImage(change){
-        console.log(change);
         var audio = new Audio('audio/click.mp3');
         audio.play();
         if (change < 4) {
