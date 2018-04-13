@@ -11,22 +11,28 @@ class MemoryController {
         document.getElementById("speler1").addEventListener("click", (e)=> {this.view.showModal1();});
         document.getElementById("speler2").addEventListener("click", (e)=> {this.view.showModal2();});
         document.getElementById("speler3").addEventListener("click", (e)=> {this.view.showModal3();});
-        document.getElementById('profile1').addEventListener('click', (e)=> {this.view.changeImage(0);});
-        document.getElementById('profile2').addEventListener('click', (e)=> {this.view.changeImage(1);});
-        document.getElementById('profile3').addEventListener('click', (e)=> {this.view.changeImage(2);});
-        document.getElementById('profile4').addEventListener('click', (e)=> {this.view.changeImage(3);});
-        document.getElementById('profile5').addEventListener('click', (e)=> {this.view.changeImage2(0);});
-        document.getElementById('profile6').addEventListener('click', (e)=> {this.view.changeImage2(1);});
-        document.getElementById('profile7').addEventListener('click', (e)=> {this.view.changeImage2(2);});
-        document.getElementById('profile8').addEventListener('click', (e)=> {this.view.changeImage2(3);});
-        document.getElementById('profile9').addEventListener('click', (e)=> {this.view.changeImage3(0);});
-        document.getElementById('profile10').addEventListener('click', (e)=> {this.view.changeImage3(1);});
-        document.getElementById('profile11').addEventListener('click', (e)=> {this.view.changeImage3(2);});
-        document.getElementById('profile12').addEventListener('click', (e)=> {this.view.changeImage3(3);});
         document.getElementsByClassName('btn btn-primary')[0].addEventListener('click', (e)=> {this.reageerOpGroepClick();});
         document.getElementsByClassName('btn btn-primary')[1].addEventListener('click', (e)=> {this.reageerOpGroepClick();});
         document.getElementsByClassName('btn btn-primary')[2].addEventListener('click', (e)=> {this.reageerOpGroepClick();});
         document.getElementsByClassName('btn btn-primary')[3].addEventListener('click', (e)=> {this.reageerOpGroepClick();});
+        document.getElementById("profile" + 1).addEventListener('click', (e)=> {this.view.changeImage(0);});
+        document.getElementById("profile" + 2).addEventListener('click', (e)=> {this.view.changeImage(1);});
+        document.getElementById("profile" + 3).addEventListener('click', (e)=> {this.view.changeImage(2);});
+        document.getElementById("profile" + 4).addEventListener('click', (e)=> {this.view.changeImage(3);});
+        document.getElementById("profile" + 5).addEventListener('click', (e)=> {this.view.changeImage(4);});
+        document.getElementById("profile" + 6).addEventListener('click', (e)=> {this.view.changeImage(5);});
+        document.getElementById("profile" + 7).addEventListener('click', (e)=> {this.view.changeImage(6);});
+        document.getElementById("profile" + 8).addEventListener('click', (e)=> {this.view.changeImage(7);});
+        document.getElementById("profile" + 9).addEventListener('click', (e)=> {this.view.changeImage(8);});
+        document.getElementById("profile" + 10).addEventListener('click', (e)=> {this.view.changeImage(9);});
+        document.getElementById("profile" + 11).addEventListener('click', (e)=> {this.view.changeImage(10);});
+        document.getElementById("profile" + 12).addEventListener('click', (e)=> {this.view.changeImage(11);});
+
+        // for (var j = 0; j < 12; j++) {
+        //   debugger;
+        //   document.getElementById("profile" + (j+1)).addEventListener('click', (e)=> {this.view.changeImage(j);});
+        //   console.log(j);
+        // }
 
         for (var i = 0; i < 14; i++) {
           document.getElementById('card'+(1+i)).addEventListener('click', (e)=> {this.reageerOpKlikKaart();});

@@ -293,56 +293,36 @@ class MemoryView  extends Observer{
   // Door deze code kan speler1 klikken op verschillende afbeeldingen en de profielfoto wordt veranderdt
 
   changeImage(change){
+        console.log(change);
         var audio = new Audio('audio/click.mp3');
         audio.play();
-        let pic = document.getElementById('speler1');
+        if (change < 4) {
+        this.pic = document.getElementById('speler1');
+        }
+        else if (change < 8) {
+        this.pic = document.getElementById('speler2');
+        }
+        else {
+        this.pic = document.getElementById('speler3');
+        }
         let modal = document.getElementById('fotoVeld');
 
         switch (change){
-        case 0: pic.src = "img/profiel1.jpg"; break;
-        case 1: pic.src = "img/profiel2.jpg"; break;
-        case 2: pic.src = "img/profiel3.png"; break;
-        case 3: pic.src = "img/profiel4.jpg"; break;
+        case 0: this.pic.src = "img/profiel1.jpg"; break;
+        case 1: this.pic.src = "img/profiel2.jpg"; break;
+        case 2: this.pic.src = "img/profiel3.png"; break;
+        case 3: this.pic.src = "img/profiel4.jpg"; break;
+        case 4: this.pic.src = "img/profiel1.jpg"; break;
+        case 5: this.pic.src = "img/profiel2.jpg"; break;
+        case 6: this.pic.src = "img/profiel3.png"; break;
+        case 7: this.pic.src = "img/profiel4.jpg"; break;
+        case 8: this.pic.src = "img/profiel1.jpg"; break;
+        case 9: this.pic.src = "img/profiel2.jpg"; break;
+        case 10: this.pic.src = "img/profiel3.png"; break;
+        case 11: this.pic.src = "img/profiel4.jpg"; break;
       }
         modal.style.display = "none";
   }
-
-  // Door deze code kan speler2 klikken op verschillende afbeeldingen en de profielfoto wordt veranderdt
-
-
-  changeImage2(change){
-        var audio = new Audio('audio/click.mp3');
-        audio.play();
-        let pic = document.getElementById('speler2');
-        let modal = document.getElementById('fotoVeld');
-
-        switch (change){
-        case 0: pic.src = "img/profiel1.jpg"; break;
-        case 1: pic.src = "img/profiel2.jpg"; break;
-        case 2: pic.src = "img/profiel3.png"; break;
-        case 3: pic.src = "img/profiel4.jpg"; break;
-      }
-        modal.style.display = "none";
-  }
-
-  // Door deze code kan speler3 klikken op verschillende afbeeldingen en de profielfoto wordt veranderdt
-
-
-  changeImage3(change){
-        var audio = new Audio('audio/click.mp3');
-        audio.play();
-        let pic = document.getElementById('speler3');
-        let modal = document.getElementById('fotoVeld');
-
-        switch (change){
-        case 0: pic.src = "img/profiel1.jpg"; break;
-        case 1: pic.src = "img/profiel2.jpg"; break;
-        case 2: pic.src = "img/profiel3.png"; break;
-        case 3: pic.src = "img/profiel4.jpg"; break;
-      }
-        modal.style.display = "none";
-  }
-
   // Door deze code kan iets transparent worden.
 
   setTransparent(id){
