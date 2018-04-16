@@ -178,8 +178,8 @@ class MemoryModel extends Observable {
         var audio = new Audio('audio/winsound.mp3');
         audio.play();
         this.Stopwatch.clear();
-        this.Stopwatch.sendToStorage(this.player1Naam);
         this.formHighscores();
+        this.Stopwatch.sendToStorage(this.player1Naam);
       }
       this.timeoutLock = false;
       this.notify();
