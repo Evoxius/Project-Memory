@@ -126,7 +126,6 @@ class MemoryView  extends Observer{
 
   showHighscore(){
     if (document.getElementById("groep4").checked) {
-      debugger;
       for (var i = 0; i < 5; i++) {
         if (this.model.highscoreArrayGroep4[i]) {
           document.getElementById("highscore").getElementsByTagName("p")[i].innerHTML =+i+1 + ". "+"Naam: " + this.model.highscoreArrayGroep4[i].naam +   " | "+

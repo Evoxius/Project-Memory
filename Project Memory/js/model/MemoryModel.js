@@ -112,6 +112,7 @@ class MemoryModel extends Observable {
 
     formHighscores(){
       if (document.getElementById("groep4").checked) {
+        this.highscoreArrayGroep4 = [];
         for (var i = 0; localStorage.getItem("Memory-TimedSpeler-Groep4" + i) != null; i++) {
           let speler = JSON.parse(localStorage.getItem("Memory-TimedSpeler-Groep4" + i));
           this.highscoreArrayGroep4[i] = speler;
@@ -119,6 +120,7 @@ class MemoryModel extends Observable {
         }
       }
       else {
+        this.highscoreArrayGroep8 = [];
         for (var i = 0; localStorage.getItem("Memory-TimedSpeler-Groep8" + i) != null; i++) {
           let speler = JSON.parse(localStorage.getItem("Memory-TimedSpeler-Groep8" + i));
           this.highscoreArrayGroep8[i] = speler;
@@ -178,8 +180,8 @@ class MemoryModel extends Observable {
         var audio = new Audio('audio/winsound.mp3');
         audio.play();
         this.Stopwatch.clear();
-        this.formHighscores();
         this.Stopwatch.sendToStorage(this.player1Naam);
+        this.formHighscores();
       }
       this.timeoutLock = false;
       this.notify();
